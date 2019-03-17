@@ -1,0 +1,6 @@
+framework module Pods_DeclarativeTableView {
+  umbrella header "Pods-DeclarativeTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}

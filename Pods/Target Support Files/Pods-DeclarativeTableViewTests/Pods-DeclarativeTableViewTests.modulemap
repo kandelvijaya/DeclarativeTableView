@@ -1,0 +1,6 @@
+framework module Pods_DeclarativeTableViewTests {
+  umbrella header "Pods-DeclarativeTableViewTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
