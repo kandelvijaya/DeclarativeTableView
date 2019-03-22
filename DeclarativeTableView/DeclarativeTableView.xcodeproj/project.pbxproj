@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F985327B8E4CAFB0EED1701 /* Pods_DeclarativeTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66903F2982411CCC49545899 /* Pods_DeclarativeTableView.framework */; };
+		2854ABF3224444B40054830C /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854ABF2224444B40054830C /* GenericList<T>.swift */; };
+		2854ABF5224444BD0054830C /* ListSectionDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854ABF4224444BD0054830C /* ListSectionDescriptor.swift */; };
+		2854ABF9224445120054830C /* ListCellDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854ABF8224445120054830C /* ListCellDescriptor.swift */; };
+		2854ABFB224445E30054830C /* AnyDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854ABFA224445E30054830C /* AnyDescriptor.swift */; };
 		28F278DC2244434C00624798 /* DeclarativeTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F278D22244434C00624798 /* DeclarativeTableView.framework */; };
 		28F278E12244434C00624798 /* DeclarativeTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F278E02244434C00624798 /* DeclarativeTableViewTests.swift */; };
 		28F278E32244434C00624798 /* DeclarativeTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F278D52244434C00624798 /* DeclarativeTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A717580F4CB1D4E54021D24B /* Pods_DeclarativeTableViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0F3BDA66140ABD03948C41 /* Pods_DeclarativeTableViewTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +29,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20322AD6CC04666BD7E98378 /* Pods-DeclarativeTableViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeclarativeTableViewTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DeclarativeTableViewTests/Pods-DeclarativeTableViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2854ABF2224444B40054830C /* GenericList<T>.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
+		2854ABF4224444BD0054830C /* ListSectionDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSectionDescriptor.swift; sourceTree = "<group>"; };
+		2854ABF8224445120054830C /* ListCellDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellDescriptor.swift; sourceTree = "<group>"; };
+		2854ABFA224445E30054830C /* AnyDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDescriptor.swift; sourceTree = "<group>"; };
 		28F278D22244434C00624798 /* DeclarativeTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeclarativeTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F278D52244434C00624798 /* DeclarativeTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeclarativeTableView.h; sourceTree = "<group>"; };
 		28F278D62244434C00624798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28F278DB2244434C00624798 /* DeclarativeTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeclarativeTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F278E02244434C00624798 /* DeclarativeTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarativeTableViewTests.swift; sourceTree = "<group>"; };
 		28F278E22244434C00624798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F0F3BDA66140ABD03948C41 /* Pods_DeclarativeTableViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeclarativeTableViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41D93ED679C11696AD89243B /* Pods-DeclarativeTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeclarativeTableView.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DeclarativeTableView/Pods-DeclarativeTableView.debug.xcconfig"; sourceTree = "<group>"; };
+		5C278525B2519A90037FAB4A /* Pods-DeclarativeTableViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeclarativeTableViewTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DeclarativeTableViewTests/Pods-DeclarativeTableViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		66903F2982411CCC49545899 /* Pods_DeclarativeTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeclarativeTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B2D245C881C43B994988BD /* Pods-DeclarativeTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeclarativeTableView.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DeclarativeTableView/Pods-DeclarativeTableView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F985327B8E4CAFB0EED1701 /* Pods_DeclarativeTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +61,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				28F278DC2244434C00624798 /* DeclarativeTableView.framework in Frameworks */,
+				A717580F4CB1D4E54021D24B /* Pods_DeclarativeTableViewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E5166AD35BFB1AF640A7C80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41D93ED679C11696AD89243B /* Pods-DeclarativeTableView.debug.xcconfig */,
+				A8B2D245C881C43B994988BD /* Pods-DeclarativeTableView.release.xcconfig */,
+				20322AD6CC04666BD7E98378 /* Pods-DeclarativeTableViewTests.debug.xcconfig */,
+				5C278525B2519A90037FAB4A /* Pods-DeclarativeTableViewTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		28F278C82244434C00624798 = {
 			isa = PBXGroup;
 			children = (
 				28F278D42244434C00624798 /* DeclarativeTableView */,
 				28F278DF2244434C00624798 /* DeclarativeTableViewTests */,
 				28F278D32244434C00624798 /* Products */,
+				0E5166AD35BFB1AF640A7C80 /* Pods */,
+				82D2E7B4D7E87663981EAFE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,7 +103,11 @@
 			isa = PBXGroup;
 			children = (
 				28F278D52244434C00624798 /* DeclarativeTableView.h */,
+				2854ABF2224444B40054830C /* GenericList<T>.swift */,
+				2854ABF4224444BD0054830C /* ListSectionDescriptor.swift */,
+				2854ABF8224445120054830C /* ListCellDescriptor.swift */,
 				28F278D62244434C00624798 /* Info.plist */,
+				2854ABFA224445E30054830C /* AnyDescriptor.swift */,
 			);
 			path = DeclarativeTableView;
 			sourceTree = "<group>";
@@ -84,6 +119,15 @@
 				28F278E22244434C00624798 /* Info.plist */,
 			);
 			path = DeclarativeTableViewTests;
+			sourceTree = "<group>";
+		};
+		82D2E7B4D7E87663981EAFE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66903F2982411CCC49545899 /* Pods_DeclarativeTableView.framework */,
+				2F0F3BDA66140ABD03948C41 /* Pods_DeclarativeTableViewTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +148,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28F278E62244434C00624798 /* Build configuration list for PBXNativeTarget "DeclarativeTableView" */;
 			buildPhases = (
+				660F2B621FF03998E2315708 /* [CP] Check Pods Manifest.lock */,
 				28F278CD2244434C00624798 /* Headers */,
 				28F278CE2244434C00624798 /* Sources */,
 				28F278CF2244434C00624798 /* Frameworks */,
@@ -122,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28F278E92244434C00624798 /* Build configuration list for PBXNativeTarget "DeclarativeTableViewTests" */;
 			buildPhases = (
+				F99A6536240457DEFC0DA6C3 /* [CP] Check Pods Manifest.lock */,
 				28F278D72244434C00624798 /* Sources */,
 				28F278D82244434C00624798 /* Frameworks */,
 				28F278D92244434C00624798 /* Resources */,
+				3FD686F242D9E606F8EDDDE0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +195,7 @@
 				TargetAttributes = {
 					28F278D12244434C00624798 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					28F278DA2244434C00624798 = {
 						CreatedOnToolsVersion = 10.1;
@@ -189,11 +237,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3FD686F242D9E606F8EDDDE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-DeclarativeTableViewTests/Pods-DeclarativeTableViewTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FastDiff/FastDiff.framework",
+				"${BUILT_PRODUCTS_DIR}/Kekka/Kekka.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastDiff.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kekka.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DeclarativeTableViewTests/Pods-DeclarativeTableViewTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		660F2B621FF03998E2315708 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeclarativeTableView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F99A6536240457DEFC0DA6C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeclarativeTableViewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28F278CE2244434C00624798 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2854ABF3224444B40054830C /* GenericList<T>.swift in Sources */,
+				2854ABFB224445E30054830C /* AnyDescriptor.swift in Sources */,
+				2854ABF9224445120054830C /* ListCellDescriptor.swift in Sources */,
+				2854ABF5224444BD0054830C /* ListSectionDescriptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +463,9 @@
 		};
 		28F278E72244434C00624798 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41D93ED679C11696AD89243B /* Pods-DeclarativeTableView.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.DeclarativeTableView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,7 +491,9 @@
 		};
 		28F278E82244434C00624798 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8B2D245C881C43B994988BD /* Pods-DeclarativeTableView.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -390,7 +518,9 @@
 		};
 		28F278EA2244434C00624798 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20322AD6CC04666BD7E98378 /* Pods-DeclarativeTableViewTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UWKQH928Q9;
 				INFOPLIST_FILE = DeclarativeTableViewTests/Info.plist;
@@ -408,7 +538,9 @@
 		};
 		28F278EB2244434C00624798 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C278525B2519A90037FAB4A /* Pods-DeclarativeTableViewTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UWKQH928Q9;
 				INFOPLIST_FILE = DeclarativeTableViewTests/Info.plist;

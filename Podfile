@@ -1,4 +1,5 @@
 use_frameworks!
+project 'DeclarativeTableView/DeclarativeTableView.xcodeproject'
 
 target 'DeclarativeTableView' do
   pod 'Kekka'
