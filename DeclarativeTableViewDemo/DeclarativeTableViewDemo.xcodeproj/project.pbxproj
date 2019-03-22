@@ -31,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2854AC012245246B0054830C /* FastDiff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FastDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F279132244438700624798 /* DeclarativeTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeclarativeTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F279162244438700624798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28F279182244438700624798 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		28F2792E224443C100624798 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2854AC012245246B0054830C /* FastDiff.framework */,
 				28F2792F224443C100624798 /* DeclarativeTableView.framework */,
 			);
 			name = Frameworks;

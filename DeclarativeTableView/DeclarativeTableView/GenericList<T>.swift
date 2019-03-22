@@ -8,16 +8,14 @@
 
 import UIKit
 import FastDiff
+import Kekka
 
-// TODO:- remove it with new version of Kekka
-typealias ClosedBlock = () -> Void
+public struct ListActionHandler {
 
-struct ListActionHandler {
+    public var onExit: ClosedBlock?
+    public var onRefreshContents: ClosedBlock?
 
-    var onExit: ClosedBlock?
-    var onRefreshContents: ClosedBlock?
-
-    fileprivate static func empty() -> ListActionHandler {
+    public static func empty() -> ListActionHandler {
         return ListActionHandler(onExit: nil, onRefreshContents: nil)
     }
 
@@ -34,7 +32,7 @@ open class ListViewController<T: Hashable>: UITableViewController {
     private(set) var sectionDescriptors: [ListSectionDescriptor<T>]
     private let handlers: ListActionHandler
 
-    init(with models: [ListSectionDescriptor<T>], style: UITableView.Style = .grouped, actionsHandler: ListActionHandler = .empty()) {
+    public init(with models: [ListSectionDescriptor<T>], style: UITableView.Style = .grouped, actionsHandler: ListActionHandler = .empty()) {
         self.sectionDescriptors = models
         self.handlers = actionsHandler
         super.init(style: style)
