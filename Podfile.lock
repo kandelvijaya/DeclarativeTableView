@@ -1,10 +1,10 @@
 PODS:
   - FastDiff (1.1.1)
-  - Kekka (0.7.3)
+  - Kekka (0.8.1)
 
 DEPENDENCIES:
   - FastDiff
-  - Kekka
+  - Kekka (~> 0.8.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -13,8 +13,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   FastDiff: 641e98e5cfdd054c465323f3a527f1d175dc4957
-  Kekka: 5da34ad719887ec0e43e2b8e7383ef6f77b0bbda
+  Kekka: a3d3021cca1200f77ba1cfba0329242ffb48c8c3
 
-PODFILE CHECKSUM: 43ed8d54108aa98ea2d7dce5db195fbc9363177f
+PODFILE CHECKSUM: 91440fba3c3027399d9e4802d24d24ae4ab5721c
 
 COCOAPODS: 1.5.3
