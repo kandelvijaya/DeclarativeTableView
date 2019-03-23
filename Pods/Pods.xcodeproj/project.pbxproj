@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0153E4A4D723549F429B3500AD313B4C /* FastDiff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF02BC2919F899A587955F3B7C3DDE1C /* FastDiff-dummy.m */; };
-		0209927BB669AA4F913257211132D333 /* Pods-DeclarativeTableViewTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7B76749FC26A3A8C6BEDB6D3312155 /* Pods-DeclarativeTableViewTests-dummy.m */; };
+		0209927BB669AA4F913257211132D333 /* Pods-DeclarativeTableViewTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A973824493115E647AE42E05C6969DA6 /* Pods-DeclarativeTableViewTests-dummy.m */; };
 		02472A2CEDB1830AFC28B3D46675BD34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		0466CB3452C0C06969888E0FDBFB9DA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		0B6671C671B27F9E158CD1B8D0B5F592 /* InternalDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA7B6E773CBE9D1A1DBECF6E415F8AB /* InternalDiff.swift */; };
+		2CF2AE6D8B92B1C343E03C9566E870D1 /* Pods-DeclarativeTableViewDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B258F0B75D6F38C8BE724F4DCC98240 /* Pods-DeclarativeTableViewDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36A88C3BE9DC21D537685DA24221B8D8 /* FullyTypedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255B80A20885A819F1F97E3417E7A0E /* FullyTypedResult.swift */; };
 		4D05F1C3F2C3AC6D1A49EF4FA27F8CD3 /* FastDiff-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F0D0C3927B344EDE030F129428329E9 /* FastDiff-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62F03E8848A41FA0D2AEA3BFD73BD032 /* Pods-DeclarativeTableViewDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D44187376D3034394A4557755D920A9C /* Pods-DeclarativeTableViewDemo-dummy.m */; };
 		68AC0667A798BB8B7B87ECACA380F6E1 /* Kekka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD6E042E2776F1B21FC08CEF0CC34D9 /* Kekka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		69960B24CFD4E079FDAA45764E8B7A92 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114ADF17A736B4E6D2A6DC96C17F050D /* Diffable.swift */; };
 		699FE7FD383EB5587AF1409E502A9982 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3892FC85DB4DEB75A56C003E2879C /* Typealiases.swift */; };
@@ -21,13 +23,14 @@
 		748CBAF79F3EA7EDCFA8CD6E3328FC24 /* DiffingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A273C87F20AADEEDF7E2CA34B74CCE7 /* DiffingAlgorithm.swift */; };
 		7FD77CFA8A3D9F66F0760E33E451EBE0 /* Kekka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 271E76E2359D5344F83895B15433611A /* Kekka-dummy.m */; };
 		A1791E37C0EDB60A040479B157B58635 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		AC0C41EF9F12ED787342C8CF90DD6124 /* Pods-DeclarativeTableViewTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DEB2861162A24CD7EF88A8A5082F3DE /* Pods-DeclarativeTableViewTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B65AA587E7B28B537C0FF62213F37C9F /* Pods-DeclarativeTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31AFA2E8C2CBEEE75568BF5F6B94850D /* Pods-DeclarativeTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC0C41EF9F12ED787342C8CF90DD6124 /* Pods-DeclarativeTableViewTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0077A0A7265E1A8E0D8B7F8FB93BC44 /* Pods-DeclarativeTableViewTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B65AA587E7B28B537C0FF62213F37C9F /* Pods-DeclarativeTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8C53523841EC846C50EBF46396EC080 /* Pods-DeclarativeTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BAAC21C37E649945B65824294A9D5CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		C284BD4D328E6E1152FEEA44135C93DD /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DCFA5343C8EF77866F34109D490926 /* Future.swift */; };
-		C29D0947E3734F4B5FEF35C55236719F /* Pods-DeclarativeTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B541F26D75D921F58A4DC28ED9FA17F /* Pods-DeclarativeTableView-dummy.m */; };
+		C29D0947E3734F4B5FEF35C55236719F /* Pods-DeclarativeTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F22202006445F5C2C7AF4D2ACDDDA0E0 /* Pods-DeclarativeTableView-dummy.m */; };
 		C498D12F1423A8F40BFF5880E55B06C1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4148230486683B2884FC262CA448302 /* Result.swift */; };
 		D677F2291292DE301B8B250F5B41B549 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B2278A5A11D4ED15EBC5D4A3568B9 /* Operators.swift */; };
+		E509DB7A1E41B802109241EF9A7FAB74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,13 @@
 			remoteGlobalIDString = C9597B4A1A0A54CC820779FFEB382CEC;
 			remoteInfo = FastDiff;
 		};
+		5DA4EF7CD6371AEC2842A28B48325322 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06DF3DE412C05A16C199B6DA9422BA31;
+			remoteInfo = Kekka;
+		};
 		7D0F284948E6E23C3E108E2890949A23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -53,6 +63,20 @@
 			remoteInfo = "Pods-DeclarativeTableView";
 		};
 		7F257CFF011D6958372284554335D6B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9597B4A1A0A54CC820779FFEB382CEC;
+			remoteInfo = FastDiff;
+		};
+		8022686C51044883B2284164BB23CFB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 691C65710BA3498ED060CBE43FCB500B;
+			remoteInfo = "Pods-DeclarativeTableView";
+		};
+		C7F430F2FEE12ADF0F3E04EE08900664 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -69,52 +93,63 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08B55724FA31EB9E78D4B831E5E51323 /* Pods-DeclarativeTableViewTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeclarativeTableViewTests-resources.sh"; sourceTree = "<group>"; };
+		07D281F38866D2AE618D976B84DABB32 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		096B2278A5A11D4ED15EBC5D4A3568B9 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Kekka/Classes/Operators.swift; sourceTree = "<group>"; };
-		0B541F26D75D921F58A4DC28ED9FA17F /* Pods-DeclarativeTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeclarativeTableView-dummy.m"; sourceTree = "<group>"; };
+		0E05A0C8DAB15438D6A8DD290622C04F /* Pods-DeclarativeTableViewDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DeclarativeTableViewDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		114ADF17A736B4E6D2A6DC96C17F050D /* Diffable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diffable.swift; path = Sources/FastDiff/Diffable.swift; sourceTree = "<group>"; };
-		11A5053436E4F0267B67847E09A2E329 /* Pods-DeclarativeTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeclarativeTableView.debug.xcconfig"; sourceTree = "<group>"; };
 		1255B80A20885A819F1F97E3417E7A0E /* FullyTypedResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullyTypedResult.swift; path = "Kekka/Classes/Result<T>/FullyTypedResult.swift"; sourceTree = "<group>"; };
+		20396A4DC1DE34A8CC00D71D29DF6D02 /* Pods-DeclarativeTableViewTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeclarativeTableViewTests-frameworks.sh"; sourceTree = "<group>"; };
+		21EEA936F590D9290D53003593B9E92F /* Pods-DeclarativeTableViewDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeclarativeTableViewDemo-resources.sh"; sourceTree = "<group>"; };
 		24E636DF3C11BB59AC1EFAE8A1CE67E3 /* ErrorEquality.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorEquality.swift; path = "Kekka/Classes/Result<T>/ErrorEquality.swift"; sourceTree = "<group>"; };
+		2629E76E0237652C9A1B01DF69E14E4C /* Pods-DeclarativeTableViewTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DeclarativeTableViewTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		271E76E2359D5344F83895B15433611A /* Kekka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kekka-dummy.m"; sourceTree = "<group>"; };
-		31AFA2E8C2CBEEE75568BF5F6B94850D /* Pods-DeclarativeTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeclarativeTableView-umbrella.h"; sourceTree = "<group>"; };
-		3D6EBAB9CD3B3579C6F36C9909EC01CA /* Pods-DeclarativeTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeclarativeTableView.release.xcconfig"; sourceTree = "<group>"; };
 		46864DC81A23741F05A59ADD509751C6 /* Kekka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kekka-prefix.pch"; sourceTree = "<group>"; };
-		4EFE7263E299D2FD0685F617917C22E4 /* Pods-DeclarativeTableView-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeclarativeTableView-resources.sh"; sourceTree = "<group>"; };
-		5387E39D9BA5458F864F79C8D754B128 /* Pods-DeclarativeTableViewTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DeclarativeTableViewTests.modulemap"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5CF2FAB7F6358D9A902A7143157782CA /* Pods-DeclarativeTableView-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeclarativeTableView-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5DEB2861162A24CD7EF88A8A5082F3DE /* Pods-DeclarativeTableViewTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeclarativeTableViewTests-umbrella.h"; sourceTree = "<group>"; };
-		5E77AAF071BC32151655D298557FC668 /* Pods_DeclarativeTableViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DeclarativeTableViewTests.framework; path = "Pods-DeclarativeTableViewTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63FB38516ED799F59DDF3B098206C83F /* Pods-DeclarativeTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DeclarativeTableView.modulemap"; sourceTree = "<group>"; };
+		6C6C04A4A03DE4A0268DEA8561C4505A /* Pods-DeclarativeTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeclarativeTableView.debug.xcconfig"; sourceTree = "<group>"; };
 		6E520057C1638FB6C8A58056EDF464FB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F9DA1B950F3EE47AB80A85E65A3046D /* FastDiff.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FastDiff.modulemap; sourceTree = "<group>"; };
-		7BCB26DA20F3C6951C9E00CFD44EB200 /* Pods-DeclarativeTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DeclarativeTableView.modulemap"; sourceTree = "<group>"; };
-		84373978B51222B0D4A0CBCC5375C67E /* Pods-DeclarativeTableView-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DeclarativeTableView-acknowledgements.plist"; sourceTree = "<group>"; };
-		86A49B30CA39725C709C2F0D15855228 /* Pods-DeclarativeTableViewTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DeclarativeTableViewTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		74C38EAC42A45F151FFC70841ABB5F7F /* Pods_DeclarativeTableViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DeclarativeTableViewTests.framework; path = "Pods-DeclarativeTableViewTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75D0F0945D3FAC5032A84CE56A81B5F0 /* Pods-DeclarativeTableViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeclarativeTableViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		77DC71741071A8A4AA47D84E42958E67 /* Pods_DeclarativeTableViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DeclarativeTableViewDemo.framework; path = "Pods-DeclarativeTableViewDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ABB2901768D8AD577D1F6DBD0EBB05F /* Pods-DeclarativeTableViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeclarativeTableViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B258F0B75D6F38C8BE724F4DCC98240 /* Pods-DeclarativeTableViewDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeclarativeTableViewDemo-umbrella.h"; sourceTree = "<group>"; };
+		7B50F895E58FBC541DE50AEA4AC8D622 /* Pods-DeclarativeTableViewDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeclarativeTableViewDemo-frameworks.sh"; sourceTree = "<group>"; };
+		7DEE109B5F8E5E5DDB550F05F025D4A1 /* Pods-DeclarativeTableViewTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DeclarativeTableViewTests.modulemap"; sourceTree = "<group>"; };
+		7F4F2889F83ED7C7B8ECC8F580110329 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86FAAC647A2793595C016A9AF7FFFA17 /* Pods-DeclarativeTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeclarativeTableView.release.xcconfig"; sourceTree = "<group>"; };
+		8915C77726FBEEC3C586EE6BD10F1FDB /* Pods-DeclarativeTableViewTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeclarativeTableViewTests-resources.sh"; sourceTree = "<group>"; };
 		898A5C1CDAF529E93961296479FE9638 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F54FFDD982B377ED996ECEA13D514A2 /* Pods-DeclarativeTableViewDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeclarativeTableViewDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		99DA6AF9FE7F39D4A4FC4A78A5CCF897 /* Pods-DeclarativeTableViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeclarativeTableViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		9695F574CDE18464D87C0AD21E0523D6 /* Pods-DeclarativeTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeclarativeTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9A273C87F20AADEEDF7E2CA34B74CCE7 /* DiffingAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiffingAlgorithm.swift; path = Sources/FastDiff/DiffingAlgorithm.swift; sourceTree = "<group>"; };
+		9B0ABD06F1B34896008ABC64850DDD97 /* Pods-DeclarativeTableViewTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeclarativeTableViewTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D133737E3555A133E5E3A236E47D794 /* FastDiff.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FastDiff.xcconfig; sourceTree = "<group>"; };
 		9F0D0C3927B344EDE030F129428329E9 /* FastDiff-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastDiff-umbrella.h"; sourceTree = "<group>"; };
-		AB7B76749FC26A3A8C6BEDB6D3312155 /* Pods-DeclarativeTableViewTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeclarativeTableViewTests-dummy.m"; sourceTree = "<group>"; };
+		A973824493115E647AE42E05C6969DA6 /* Pods-DeclarativeTableViewTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeclarativeTableViewTests-dummy.m"; sourceTree = "<group>"; };
+		AC2E84E2DD68F4604C306B7BAF8BF565 /* FastDiff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FastDiff.framework; path = FastDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF02BC2919F899A587955F3B7C3DDE1C /* FastDiff-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FastDiff-dummy.m"; sourceTree = "<group>"; };
+		BAA5A349C97323FBFED3FE7850810750 /* Pods-DeclarativeTableViewDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DeclarativeTableViewDemo.modulemap"; sourceTree = "<group>"; };
 		BDD6E042E2776F1B21FC08CEF0CC34D9 /* Kekka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kekka-umbrella.h"; sourceTree = "<group>"; };
 		BF13E1298716B0BC2E49483CEBC82551 /* Kekka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kekka.xcconfig; sourceTree = "<group>"; };
 		C4148230486683B2884FC262CA448302 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = "Kekka/Classes/Result<T>/Result.swift"; sourceTree = "<group>"; };
-		C5CE1255620BF9059F69508DA7F63759 /* Pods_DeclarativeTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DeclarativeTableView.framework; path = "Pods-DeclarativeTableView.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFC56ECD5EE4452AD0E60E35A19F515F /* Pods-DeclarativeTableViewTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeclarativeTableViewTests-frameworks.sh"; sourceTree = "<group>"; };
+		C51A1BCE8EBEDD2566E6E770B1D30662 /* Pods_DeclarativeTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DeclarativeTableView.framework; path = "Pods-DeclarativeTableView.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2FA9AED3354D439101B8615733A391E /* Pods-DeclarativeTableView-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DeclarativeTableView-acknowledgements.plist"; sourceTree = "<group>"; };
+		D44187376D3034394A4557755D920A9C /* Pods-DeclarativeTableViewDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeclarativeTableViewDemo-dummy.m"; sourceTree = "<group>"; };
 		D9CFC2CAE2294553528F7730F8543AA6 /* FastDiff-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastDiff-prefix.pch"; sourceTree = "<group>"; };
-		DA234A631ACB9349A7C2B9843CC93CB1 /* Kekka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kekka.framework; path = Kekka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9EE70A6ADEB20AF975D2419F485A927 /* Pods-DeclarativeTableView-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeclarativeTableView-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DCA7B6E773CBE9D1A1DBECF6E415F8AB /* InternalDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternalDiff.swift; path = Sources/FastDiff/InternalDiff.swift; sourceTree = "<group>"; };
-		E3A2DF7E5D9C7B3917A9C4AE9C47A6BF /* Pods-DeclarativeTableViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeclarativeTableViewTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E3DCE060647F6240B35D0A45A6CB05F2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6B731073B01361A2F1AAA41CF7E9FED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE6DA6BB3081B0370959230763FD76E3 /* Kekka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kekka.framework; path = Kekka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C3892FC85DB4DEB75A56C003E2879C /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Kekka/Classes/Typealiases.swift; sourceTree = "<group>"; };
-		EDB12A71B2496315E9D3F5299A8921C1 /* FastDiff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FastDiff.framework; path = FastDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0077A0A7265E1A8E0D8B7F8FB93BC44 /* Pods-DeclarativeTableViewTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeclarativeTableViewTests-umbrella.h"; sourceTree = "<group>"; };
 		F0DCFA5343C8EF77866F34109D490926 /* Future.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Future.swift; path = "Kekka/Classes/Future<T>/Future.swift"; sourceTree = "<group>"; };
 		F1027A032217278D79E79BD5B4F07D2C /* Kekka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kekka.modulemap; sourceTree = "<group>"; };
-		F62270B3834F00A9AFC2424B449FFC56 /* Pods-DeclarativeTableViewTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeclarativeTableViewTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F22202006445F5C2C7AF4D2ACDDDA0E0 /* Pods-DeclarativeTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeclarativeTableView-dummy.m"; sourceTree = "<group>"; };
+		F8C53523841EC846C50EBF46396EC080 /* Pods-DeclarativeTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeclarativeTableView-umbrella.h"; sourceTree = "<group>"; };
+		F94C2B62992E032BB0426248075A4D29 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA431C4F24DA274FF697750F979DD950 /* Pods-DeclarativeTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeclarativeTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FBEE6552A21EC6FF4F88E6BF3259E22C /* Pods-DeclarativeTableView-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeclarativeTableView-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,25 +185,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E44EBC3979E8878E5BBA17C44612A94F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E509DB7A1E41B802109241EF9A7FAB74 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		33F2E9788DC466AF1A6D42AB167CACBA /* Pods-DeclarativeTableViewTests */ = {
+		00AAE0E3F64896C4104C387C012FDB34 /* Pods-DeclarativeTableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E3DCE060647F6240B35D0A45A6CB05F2 /* Info.plist */,
-				5387E39D9BA5458F864F79C8D754B128 /* Pods-DeclarativeTableViewTests.modulemap */,
-				F62270B3834F00A9AFC2424B449FFC56 /* Pods-DeclarativeTableViewTests-acknowledgements.markdown */,
-				86A49B30CA39725C709C2F0D15855228 /* Pods-DeclarativeTableViewTests-acknowledgements.plist */,
-				AB7B76749FC26A3A8C6BEDB6D3312155 /* Pods-DeclarativeTableViewTests-dummy.m */,
-				CFC56ECD5EE4452AD0E60E35A19F515F /* Pods-DeclarativeTableViewTests-frameworks.sh */,
-				08B55724FA31EB9E78D4B831E5E51323 /* Pods-DeclarativeTableViewTests-resources.sh */,
-				5DEB2861162A24CD7EF88A8A5082F3DE /* Pods-DeclarativeTableViewTests-umbrella.h */,
-				E3A2DF7E5D9C7B3917A9C4AE9C47A6BF /* Pods-DeclarativeTableViewTests.debug.xcconfig */,
-				99DA6AF9FE7F39D4A4FC4A78A5CCF897 /* Pods-DeclarativeTableViewTests.release.xcconfig */,
+				F94C2B62992E032BB0426248075A4D29 /* Info.plist */,
+				BAA5A349C97323FBFED3FE7850810750 /* Pods-DeclarativeTableViewDemo.modulemap */,
+				8F54FFDD982B377ED996ECEA13D514A2 /* Pods-DeclarativeTableViewDemo-acknowledgements.markdown */,
+				0E05A0C8DAB15438D6A8DD290622C04F /* Pods-DeclarativeTableViewDemo-acknowledgements.plist */,
+				D44187376D3034394A4557755D920A9C /* Pods-DeclarativeTableViewDemo-dummy.m */,
+				7B50F895E58FBC541DE50AEA4AC8D622 /* Pods-DeclarativeTableViewDemo-frameworks.sh */,
+				21EEA936F590D9290D53003593B9E92F /* Pods-DeclarativeTableViewDemo-resources.sh */,
+				7B258F0B75D6F38C8BE724F4DCC98240 /* Pods-DeclarativeTableViewDemo-umbrella.h */,
+				9695F574CDE18464D87C0AD21E0523D6 /* Pods-DeclarativeTableViewDemo.debug.xcconfig */,
+				FA431C4F24DA274FF697750F979DD950 /* Pods-DeclarativeTableViewDemo.release.xcconfig */,
 			);
-			name = "Pods-DeclarativeTableViewTests";
-			path = "Target Support Files/Pods-DeclarativeTableViewTests";
+			name = "Pods-DeclarativeTableViewDemo";
+			path = "Target Support Files/Pods-DeclarativeTableViewDemo";
+			sourceTree = "<group>";
+		};
+		39578DECD04C5707EB437DEDA9784DD0 /* Pods-DeclarativeTableView */ = {
+			isa = PBXGroup;
+			children = (
+				07D281F38866D2AE618D976B84DABB32 /* Info.plist */,
+				63FB38516ED799F59DDF3B098206C83F /* Pods-DeclarativeTableView.modulemap */,
+				D9EE70A6ADEB20AF975D2419F485A927 /* Pods-DeclarativeTableView-acknowledgements.markdown */,
+				D2FA9AED3354D439101B8615733A391E /* Pods-DeclarativeTableView-acknowledgements.plist */,
+				F22202006445F5C2C7AF4D2ACDDDA0E0 /* Pods-DeclarativeTableView-dummy.m */,
+				FBEE6552A21EC6FF4F88E6BF3259E22C /* Pods-DeclarativeTableView-resources.sh */,
+				F8C53523841EC846C50EBF46396EC080 /* Pods-DeclarativeTableView-umbrella.h */,
+				6C6C04A4A03DE4A0268DEA8561C4505A /* Pods-DeclarativeTableView.debug.xcconfig */,
+				86FAAC647A2793595C016A9AF7FFFA17 /* Pods-DeclarativeTableView.release.xcconfig */,
+			);
+			name = "Pods-DeclarativeTableView";
+			path = "Target Support Files/Pods-DeclarativeTableView";
 			sourceTree = "<group>";
 		};
 		5C56E8A8C7DD92ECE1E62A939D6B6DA3 /* Kekka */ = {
@@ -194,22 +254,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6ACB7644BD399EB0CF4F06C59D3CA44B /* Targets Support Files */ = {
+		7337ECEDCD344F7ACF6A545AA61CB1FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED4B6FCA3A0C5851BD0135C6828A1C74 /* Pods-DeclarativeTableView */,
-				33F2E9788DC466AF1A6D42AB167CACBA /* Pods-DeclarativeTableViewTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		6BEB4A5A16C940C023F38DF11AEFDE04 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EDB12A71B2496315E9D3F5299A8921C1 /* FastDiff.framework */,
-				DA234A631ACB9349A7C2B9843CC93CB1 /* Kekka.framework */,
-				C5CE1255620BF9059F69508DA7F63759 /* Pods_DeclarativeTableView.framework */,
-				5E77AAF071BC32151655D298557FC668 /* Pods_DeclarativeTableViewTests.framework */,
+				AC2E84E2DD68F4604C306B7BAF8BF565 /* FastDiff.framework */,
+				DE6DA6BB3081B0370959230763FD76E3 /* Kekka.framework */,
+				C51A1BCE8EBEDD2566E6E770B1D30662 /* Pods_DeclarativeTableView.framework */,
+				77DC71741071A8A4AA47D84E42958E67 /* Pods_DeclarativeTableViewDemo.framework */,
+				74C38EAC42A45F151FFC70841ABB5F7F /* Pods_DeclarativeTableViewTests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,9 +272,19 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				C95247D1179EC4529F9A8AD90441D197 /* Pods */,
-				6BEB4A5A16C940C023F38DF11AEFDE04 /* Products */,
-				6ACB7644BD399EB0CF4F06C59D3CA44B /* Targets Support Files */,
+				7337ECEDCD344F7ACF6A545AA61CB1FB /* Products */,
+				8CF827F7C175874655ADB55EBEA8ECBE /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8CF827F7C175874655ADB55EBEA8ECBE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				39578DECD04C5707EB437DEDA9784DD0 /* Pods-DeclarativeTableView */,
+				00AAE0E3F64896C4104C387C012FDB34 /* Pods-DeclarativeTableViewDemo */,
+				D23D5F9B50D26D14771D515670B3BF8A /* Pods-DeclarativeTableViewTests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		9AEAB84E9B58B24CEC888F8668046D79 /* FastDiff */ = {
@@ -268,6 +330,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D23D5F9B50D26D14771D515670B3BF8A /* Pods-DeclarativeTableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F4F2889F83ED7C7B8ECC8F580110329 /* Info.plist */,
+				7DEE109B5F8E5E5DDB550F05F025D4A1 /* Pods-DeclarativeTableViewTests.modulemap */,
+				9B0ABD06F1B34896008ABC64850DDD97 /* Pods-DeclarativeTableViewTests-acknowledgements.markdown */,
+				2629E76E0237652C9A1B01DF69E14E4C /* Pods-DeclarativeTableViewTests-acknowledgements.plist */,
+				A973824493115E647AE42E05C6969DA6 /* Pods-DeclarativeTableViewTests-dummy.m */,
+				20396A4DC1DE34A8CC00D71D29DF6D02 /* Pods-DeclarativeTableViewTests-frameworks.sh */,
+				8915C77726FBEEC3C586EE6BD10F1FDB /* Pods-DeclarativeTableViewTests-resources.sh */,
+				F0077A0A7265E1A8E0D8B7F8FB93BC44 /* Pods-DeclarativeTableViewTests-umbrella.h */,
+				75D0F0945D3FAC5032A84CE56A81B5F0 /* Pods-DeclarativeTableViewTests.debug.xcconfig */,
+				7ABB2901768D8AD577D1F6DBD0EBB05F /* Pods-DeclarativeTableViewTests.release.xcconfig */,
+			);
+			name = "Pods-DeclarativeTableViewTests";
+			path = "Target Support Files/Pods-DeclarativeTableViewTests";
+			sourceTree = "<group>";
+		};
 		D3F2516C88CBDFDC122216198EB8A335 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,23 +360,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FastDiff";
-			sourceTree = "<group>";
-		};
-		ED4B6FCA3A0C5851BD0135C6828A1C74 /* Pods-DeclarativeTableView */ = {
-			isa = PBXGroup;
-			children = (
-				E6B731073B01361A2F1AAA41CF7E9FED /* Info.plist */,
-				7BCB26DA20F3C6951C9E00CFD44EB200 /* Pods-DeclarativeTableView.modulemap */,
-				5CF2FAB7F6358D9A902A7143157782CA /* Pods-DeclarativeTableView-acknowledgements.markdown */,
-				84373978B51222B0D4A0CBCC5375C67E /* Pods-DeclarativeTableView-acknowledgements.plist */,
-				0B541F26D75D921F58A4DC28ED9FA17F /* Pods-DeclarativeTableView-dummy.m */,
-				4EFE7263E299D2FD0685F617917C22E4 /* Pods-DeclarativeTableView-resources.sh */,
-				31AFA2E8C2CBEEE75568BF5F6B94850D /* Pods-DeclarativeTableView-umbrella.h */,
-				11A5053436E4F0267B67847E09A2E329 /* Pods-DeclarativeTableView.debug.xcconfig */,
-				3D6EBAB9CD3B3579C6F36C9909EC01CA /* Pods-DeclarativeTableView.release.xcconfig */,
-			);
-			name = "Pods-DeclarativeTableView";
-			path = "Target Support Files/Pods-DeclarativeTableView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +397,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A2745C131C3143337DD1AB9DA1AD3FC7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF2AE6D8B92B1C343E03C9566E870D1 /* Pods-DeclarativeTableViewDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -352,7 +423,7 @@
 			);
 			name = Kekka;
 			productName = Kekka;
-			productReference = DA234A631ACB9349A7C2B9843CC93CB1 /* Kekka.framework */;
+			productReference = DE6DA6BB3081B0370959230763FD76E3 /* Kekka.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		1C927AEF06D82C91448CE8A0E627E2AE /* Pods-DeclarativeTableViewTests */ = {
@@ -373,7 +444,7 @@
 			);
 			name = "Pods-DeclarativeTableViewTests";
 			productName = "Pods-DeclarativeTableViewTests";
-			productReference = 5E77AAF071BC32151655D298557FC668 /* Pods_DeclarativeTableViewTests.framework */;
+			productReference = 74C38EAC42A45F151FFC70841ABB5F7F /* Pods_DeclarativeTableViewTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		691C65710BA3498ED060CBE43FCB500B /* Pods-DeclarativeTableView */ = {
@@ -393,7 +464,28 @@
 			);
 			name = "Pods-DeclarativeTableView";
 			productName = "Pods-DeclarativeTableView";
-			productReference = C5CE1255620BF9059F69508DA7F63759 /* Pods_DeclarativeTableView.framework */;
+			productReference = C51A1BCE8EBEDD2566E6E770B1D30662 /* Pods_DeclarativeTableView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		96F1DC7212CEBA0A000973ED6F7623B3 /* Pods-DeclarativeTableViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EE21931195F98C78C157036C8D4BD23 /* Build configuration list for PBXNativeTarget "Pods-DeclarativeTableViewDemo" */;
+			buildPhases = (
+				A2745C131C3143337DD1AB9DA1AD3FC7 /* Headers */,
+				29047B8FCF46979A5332B10864FE4C63 /* Sources */,
+				E44EBC3979E8878E5BBA17C44612A94F /* Frameworks */,
+				BEAC4BB68996BCBBBD95E0B802A83590 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8318DAD02312D14A2FF4DE21E2A93EF /* PBXTargetDependency */,
+				0A8F1387E28399B152F4CF3AFD859AAF /* PBXTargetDependency */,
+				0B89948BD0F887499D672A5D67A63FFB /* PBXTargetDependency */,
+			);
+			name = "Pods-DeclarativeTableViewDemo";
+			productName = "Pods-DeclarativeTableViewDemo";
+			productReference = 77DC71741071A8A4AA47D84E42958E67 /* Pods_DeclarativeTableViewDemo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C9597B4A1A0A54CC820779FFEB382CEC /* FastDiff */ = {
@@ -411,7 +503,7 @@
 			);
 			name = FastDiff;
 			productName = FastDiff;
-			productReference = EDB12A71B2496315E9D3F5299A8921C1 /* FastDiff.framework */;
+			productReference = AC2E84E2DD68F4604C306B7BAF8BF565 /* FastDiff.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -431,13 +523,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 6BEB4A5A16C940C023F38DF11AEFDE04 /* Products */;
+			productRefGroup = 7337ECEDCD344F7ACF6A545AA61CB1FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C9597B4A1A0A54CC820779FFEB382CEC /* FastDiff */,
 				06DF3DE412C05A16C199B6DA9422BA31 /* Kekka */,
 				691C65710BA3498ED060CBE43FCB500B /* Pods-DeclarativeTableView */,
+				96F1DC7212CEBA0A000973ED6F7623B3 /* Pods-DeclarativeTableViewDemo */,
 				1C927AEF06D82C91448CE8A0E627E2AE /* Pods-DeclarativeTableViewTests */,
 			);
 		};
@@ -452,6 +545,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9319509E12555115D18551D51B6B8EF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEAC4BB68996BCBBBD95E0B802A83590 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -480,6 +580,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C29D0947E3734F4B5FEF35C55236719F /* Pods-DeclarativeTableView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29047B8FCF46979A5332B10864FE4C63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62F03E8848A41FA0D2AEA3BFD73BD032 /* Pods-DeclarativeTableViewDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +627,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0A8F1387E28399B152F4CF3AFD859AAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kekka;
+			target = 06DF3DE412C05A16C199B6DA9422BA31 /* Kekka */;
+			targetProxy = 5DA4EF7CD6371AEC2842A28B48325322 /* PBXContainerItemProxy */;
+		};
+		0B89948BD0F887499D672A5D67A63FFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-DeclarativeTableView";
+			target = 691C65710BA3498ED060CBE43FCB500B /* Pods-DeclarativeTableView */;
+			targetProxy = 8022686C51044883B2284164BB23CFB7 /* PBXContainerItemProxy */;
+		};
 		1445F211D0B17A33B0F5A5AB70AE66D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-DeclarativeTableView";
@@ -537,6 +657,12 @@
 			target = 06DF3DE412C05A16C199B6DA9422BA31 /* Kekka */;
 			targetProxy = 338C81594EB2AAC6427F622C41926CF0 /* PBXContainerItemProxy */;
 		};
+		D8318DAD02312D14A2FF4DE21E2A93EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FastDiff;
+			target = C9597B4A1A0A54CC820779FFEB382CEC /* FastDiff */;
+			targetProxy = C7F430F2FEE12ADF0F3E04EE08900664 /* PBXContainerItemProxy */;
+		};
 		DE781F5A4FA06B9A7281877D1E0A4CB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Kekka;
@@ -554,7 +680,7 @@
 /* Begin XCBuildConfiguration section */
 		018610A63A013E7DE4DDB28820180799 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99DA6AF9FE7F39D4A4FC4A78A5CCF897 /* Pods-DeclarativeTableViewTests.release.xcconfig */;
+			baseConfigurationReference = 7ABB2901768D8AD577D1F6DBD0EBB05F /* Pods-DeclarativeTableViewTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -633,7 +759,7 @@
 		};
 		2B6D6A0702E34F8D913BE3C9F5EA33FF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D6EBAB9CD3B3579C6F36C9909EC01CA /* Pods-DeclarativeTableView.release.xcconfig */;
+			baseConfigurationReference = 86FAAC647A2793595C016A9AF7FFFA17 /* Pods-DeclarativeTableView.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -740,6 +866,46 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		730272D8A481D7E222998B399AC661D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9695F574CDE18464D87C0AD21E0523D6 /* Pods-DeclarativeTableViewDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DeclarativeTableViewDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DeclarativeTableViewDemo/Pods-DeclarativeTableViewDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -869,6 +1035,47 @@
 			};
 			name = Release;
 		};
+		99CDD6F4D05C6EC0825C2E597951C5E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA431C4F24DA274FF697750F979DD950 /* Pods-DeclarativeTableViewDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DeclarativeTableViewDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DeclarativeTableViewDemo/Pods-DeclarativeTableViewDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C364064CAC9DE4E6BE9DA8F824C4CEBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF13E1298716B0BC2E49483CEBC82551 /* Kekka.xcconfig */;
@@ -907,7 +1114,7 @@
 		};
 		E03BD107575B73ADE94BB06038E9077E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11A5053436E4F0267B67847E09A2E329 /* Pods-DeclarativeTableView.debug.xcconfig */;
+			baseConfigurationReference = 6C6C04A4A03DE4A0268DEA8561C4505A /* Pods-DeclarativeTableView.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -947,7 +1154,7 @@
 		};
 		E12EC251EE72E7327D41EC58D32B299E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3A2DF7E5D9C7B3917A9C4AE9C47A6BF /* Pods-DeclarativeTableViewTests.debug.xcconfig */;
+			baseConfigurationReference = 75D0F0945D3FAC5032A84CE56A81B5F0 /* Pods-DeclarativeTableViewTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1011,6 +1218,15 @@
 			buildConfigurations = (
 				8322AE3FB6DF16A80BCBA121575DBB8A /* Debug */,
 				8DC861F53B471F106BC8ACC4475EFA12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EE21931195F98C78C157036C8D4BD23 /* Build configuration list for PBXNativeTarget "Pods-DeclarativeTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				730272D8A481D7E222998B399AC661D8 /* Debug */,
+				99CDD6F4D05C6EC0825C2E597951C5E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,6 +9,11 @@ target 'DeclarativeTableView' do
     inherit! :search_paths
     # Pods for testing
   end
+  target 'DeclarativeTableViewDemo' do
+      inherit! :search_paths
+      pod 'Kekka'
+      pod 'FastDiff'
+  end
 
 end
 

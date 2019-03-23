@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:DeclarativeTableViewDemo/DeclarativeTableViewDemo.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:DeclarativeTableView/DeclarativeTableView.xcodeproj">
    </FileRef>
    <FileRef

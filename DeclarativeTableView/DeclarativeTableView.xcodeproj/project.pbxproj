@@ -12,13 +12,28 @@
 		2854ABF5224444BD0054830C /* ListSectionDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854ABF4224444BD0054830C /* ListSectionDescriptor.swift */; };
 		2854ABF9224445120054830C /* ListCellDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854ABF8224445120054830C /* ListCellDescriptor.swift */; };
 		2854ABFB224445E30054830C /* AnyDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854ABFA224445E30054830C /* AnyDescriptor.swift */; };
+		2854AC1422463D520054830C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2854AC1222463D520054830C /* Main.storyboard */; };
+		2854AC1622463D530054830C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2854AC1522463D530054830C /* Assets.xcassets */; };
+		2854AC1922463D530054830C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2854AC1722463D530054830C /* LaunchScreen.storyboard */; };
+		2854AC2022463D670054830C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854AC1E22463D670054830C /* ViewController.swift */; };
+		2854AC2122463D670054830C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854AC1F22463D670054830C /* AppDelegate.swift */; };
+		2854AC2222463DBB0054830C /* DeclarativeTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F278D22244434C00624798 /* DeclarativeTableView.framework */; };
+		2854AC2322463DBB0054830C /* DeclarativeTableView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28F278D22244434C00624798 /* DeclarativeTableView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28F278DC2244434C00624798 /* DeclarativeTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F278D22244434C00624798 /* DeclarativeTableView.framework */; };
 		28F278E12244434C00624798 /* DeclarativeTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F278E02244434C00624798 /* DeclarativeTableViewTests.swift */; };
 		28F278E32244434C00624798 /* DeclarativeTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F278D52244434C00624798 /* DeclarativeTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBCC8F2B8C0BFCAF7221148 /* Pods_DeclarativeTableViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B7FA0084142F230D6F070C /* Pods_DeclarativeTableViewDemo.framework */; };
 		A717580F4CB1D4E54021D24B /* Pods_DeclarativeTableViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0F3BDA66140ABD03948C41 /* Pods_DeclarativeTableViewTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2854AC2422463DBB0054830C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28F278C92244434C00624798 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28F278D12244434C00624798;
+			remoteInfo = DeclarativeTableView;
+		};
 		28F278DD2244434C00624798 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 28F278C92244434C00624798 /* Project object */;
@@ -28,12 +43,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2854AC2622463DBB0054830C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2854AC2322463DBB0054830C /* DeclarativeTableView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		20322AD6CC04666BD7E98378 /* Pods-DeclarativeTableViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeclarativeTableViewTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DeclarativeTableViewTests/Pods-DeclarativeTableViewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2854ABF2224444B40054830C /* GenericList<T>.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
 		2854ABF4224444BD0054830C /* ListSectionDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSectionDescriptor.swift; sourceTree = "<group>"; };
 		2854ABF8224445120054830C /* ListCellDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellDescriptor.swift; sourceTree = "<group>"; };
 		2854ABFA224445E30054830C /* AnyDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDescriptor.swift; sourceTree = "<group>"; };
+		2854AC0C22463D520054830C /* DeclarativeTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeclarativeTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2854AC1322463D520054830C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2854AC1522463D530054830C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2854AC1822463D530054830C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2854AC1A22463D530054830C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2854AC1E22463D670054830C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2854AC1F22463D670054830C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28F278D22244434C00624798 /* DeclarativeTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeclarativeTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F278D52244434C00624798 /* DeclarativeTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeclarativeTableView.h; sourceTree = "<group>"; };
 		28F278D62244434C00624798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,13 +77,25 @@
 		28F278E02244434C00624798 /* DeclarativeTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarativeTableViewTests.swift; sourceTree = "<group>"; };
 		28F278E22244434C00624798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F0F3BDA66140ABD03948C41 /* Pods_DeclarativeTableViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeclarativeTableViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FB2FF4813F78680BB2CD989 /* Pods-DeclarativeTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeclarativeTableViewDemo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DeclarativeTableViewDemo/Pods-DeclarativeTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		41D93ED679C11696AD89243B /* Pods-DeclarativeTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeclarativeTableView.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DeclarativeTableView/Pods-DeclarativeTableView.debug.xcconfig"; sourceTree = "<group>"; };
 		5C278525B2519A90037FAB4A /* Pods-DeclarativeTableViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeclarativeTableViewTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DeclarativeTableViewTests/Pods-DeclarativeTableViewTests.release.xcconfig"; sourceTree = "<group>"; };
 		66903F2982411CCC49545899 /* Pods_DeclarativeTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeclarativeTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B2D245C881C43B994988BD /* Pods-DeclarativeTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeclarativeTableView.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DeclarativeTableView/Pods-DeclarativeTableView.release.xcconfig"; sourceTree = "<group>"; };
+		B476EB8BC22EED7ED63BF976 /* Pods-DeclarativeTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeclarativeTableViewDemo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DeclarativeTableViewDemo/Pods-DeclarativeTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E5B7FA0084142F230D6F070C /* Pods_DeclarativeTableViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeclarativeTableViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2854AC0922463D520054830C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2854AC2222463DBB0054830C /* DeclarativeTableView.framework in Frameworks */,
+				3DBCC8F2B8C0BFCAF7221148 /* Pods_DeclarativeTableViewDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		28F278CF2244434C00624798 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,8 +123,23 @@
 				A8B2D245C881C43B994988BD /* Pods-DeclarativeTableView.release.xcconfig */,
 				20322AD6CC04666BD7E98378 /* Pods-DeclarativeTableViewTests.debug.xcconfig */,
 				5C278525B2519A90037FAB4A /* Pods-DeclarativeTableViewTests.release.xcconfig */,
+				2FB2FF4813F78680BB2CD989 /* Pods-DeclarativeTableViewDemo.debug.xcconfig */,
+				B476EB8BC22EED7ED63BF976 /* Pods-DeclarativeTableViewDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2854AC0D22463D520054830C /* DeclarativeTableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2854AC1F22463D670054830C /* AppDelegate.swift */,
+				2854AC1E22463D670054830C /* ViewController.swift */,
+				2854AC1222463D520054830C /* Main.storyboard */,
+				2854AC1522463D530054830C /* Assets.xcassets */,
+				2854AC1722463D530054830C /* LaunchScreen.storyboard */,
+				2854AC1A22463D530054830C /* Info.plist */,
+			);
+			path = DeclarativeTableViewDemo;
 			sourceTree = "<group>";
 		};
 		28F278C82244434C00624798 = {
@@ -84,6 +147,7 @@
 			children = (
 				28F278D42244434C00624798 /* DeclarativeTableView */,
 				28F278DF2244434C00624798 /* DeclarativeTableViewTests */,
+				2854AC0D22463D520054830C /* DeclarativeTableViewDemo */,
 				28F278D32244434C00624798 /* Products */,
 				0E5166AD35BFB1AF640A7C80 /* Pods */,
 				82D2E7B4D7E87663981EAFE2 /* Frameworks */,
@@ -95,6 +159,7 @@
 			children = (
 				28F278D22244434C00624798 /* DeclarativeTableView.framework */,
 				28F278DB2244434C00624798 /* DeclarativeTableViewTests.xctest */,
+				2854AC0C22463D520054830C /* DeclarativeTableViewDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +191,7 @@
 			children = (
 				66903F2982411CCC49545899 /* Pods_DeclarativeTableView.framework */,
 				2F0F3BDA66140ABD03948C41 /* Pods_DeclarativeTableViewTests.framework */,
+				E5B7FA0084142F230D6F070C /* Pods_DeclarativeTableViewDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,6 +210,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2854AC0B22463D520054830C /* DeclarativeTableViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2854AC1D22463D530054830C /* Build configuration list for PBXNativeTarget "DeclarativeTableViewDemo" */;
+			buildPhases = (
+				6FD8CA1789896874056B0F50 /* [CP] Check Pods Manifest.lock */,
+				2854AC0822463D520054830C /* Sources */,
+				2854AC0922463D520054830C /* Frameworks */,
+				2854AC0A22463D520054830C /* Resources */,
+				2854AC2622463DBB0054830C /* Embed Frameworks */,
+				E5A2BE9F486CFAEE623430C3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2854AC2522463DBB0054830C /* PBXTargetDependency */,
+			);
+			name = DeclarativeTableViewDemo;
+			productName = DeclarativeTableViewDemo;
+			productReference = 2854AC0C22463D520054830C /* DeclarativeTableViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		28F278D12244434C00624798 /* DeclarativeTableView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28F278E62244434C00624798 /* Build configuration list for PBXNativeTarget "DeclarativeTableView" */;
@@ -193,6 +280,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = com.kandelvijaya.declarativeTableView;
 				TargetAttributes = {
+					2854AC0B22463D520054830C = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					28F278D12244434C00624798 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -208,6 +298,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 28F278C82244434C00624798;
 			productRefGroup = 28F278D32244434C00624798 /* Products */;
@@ -216,11 +307,22 @@
 			targets = (
 				28F278D12244434C00624798 /* DeclarativeTableView */,
 				28F278DA2244434C00624798 /* DeclarativeTableViewTests */,
+				2854AC0B22463D520054830C /* DeclarativeTableViewDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2854AC0A22463D520054830C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2854AC1922463D530054830C /* LaunchScreen.storyboard in Resources */,
+				2854AC1622463D530054830C /* Assets.xcassets in Resources */,
+				2854AC1422463D520054830C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		28F278D02244434C00624798 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,6 +386,52 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6FD8CA1789896874056B0F50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeclarativeTableViewDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5A2BE9F486CFAEE623430C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-DeclarativeTableViewDemo/Pods-DeclarativeTableViewDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FastDiff/FastDiff.framework",
+				"${BUILT_PRODUCTS_DIR}/Kekka/Kekka.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastDiff.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kekka.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DeclarativeTableViewDemo/Pods-DeclarativeTableViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F99A6536240457DEFC0DA6C3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +457,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2854AC0822463D520054830C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2854AC2122463D670054830C /* AppDelegate.swift in Sources */,
+				2854AC2022463D670054830C /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		28F278CE2244434C00624798 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -331,6 +488,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2854AC2522463DBB0054830C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28F278D12244434C00624798 /* DeclarativeTableView */;
+			targetProxy = 2854AC2422463DBB0054830C /* PBXContainerItemProxy */;
+		};
 		28F278DE2244434C00624798 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 28F278D12244434C00624798 /* DeclarativeTableView */;
@@ -338,7 +500,66 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		2854AC1222463D520054830C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2854AC1322463D520054830C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2854AC1722463D530054830C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2854AC1822463D530054830C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		2854AC1B22463D530054830C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FB2FF4813F78680BB2CD989 /* Pods-DeclarativeTableViewDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UWKQH928Q9;
+				INFOPLIST_FILE = DeclarativeTableViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.DeclarativeTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2854AC1C22463D530054830C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B476EB8BC22EED7ED63BF976 /* Pods-DeclarativeTableViewDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UWKQH928Q9;
+				INFOPLIST_FILE = DeclarativeTableViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kandelvijaya.DeclarativeTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		28F278E42244434C00624798 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -559,6 +780,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2854AC1D22463D530054830C /* Build configuration list for PBXNativeTarget "DeclarativeTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2854AC1B22463D530054830C /* Debug */,
+				2854AC1C22463D530054830C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		28F278CC2244434C00624798 /* Build configuration list for PBXProject "DeclarativeTableView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
