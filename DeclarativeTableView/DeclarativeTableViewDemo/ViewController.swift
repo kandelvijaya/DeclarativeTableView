@@ -11,16 +11,16 @@ import DeclarativeTableView
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private var currentChild: UIViewController?
 
-
-        let models = [1,2,3]
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let models = ["Simple", "Multi Section", "Multi Section Heterogeneous"]
         let identifier = "MCell"
 
         let cellDescs = models.map { m in
             ListCellDescriptor(m, identifier: identifier, cellClass: SimpleCell.self, configure: { cell in
-                cell.textLabel?.text = String(describing: m)
+                cell.textLabel?.text = m
             }).any()
         }
 
@@ -30,10 +30,17 @@ class ViewController: UIViewController {
     }
 
     func embed(_ vc: UIViewController) {
-        vc.willMove(toParent: self)
+        self.currentChild = vc
+        self.addChild(vc)
         self.view.addSubview(vc.view)
         vc.view.bounds = self.view.bounds
         vc.didMove(toParent: self)
+    }
+
+    func removeChild() {
+        self.currentChild?.willMove(toParent: nil)
+        self.currentChild?.view.removeFromSuperview()
+        self.currentChild?.removeFromParent()
     }
 
 
