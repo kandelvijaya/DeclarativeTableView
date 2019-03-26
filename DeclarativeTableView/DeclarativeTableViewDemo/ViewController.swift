@@ -34,14 +34,28 @@ class ViewController: UIViewController {
     }
 
     func tapped(_ item: String) {
-        print(item)
+        let thisModels = [1,2,3]
+        let cellDescs = thisModels.map { item in
+            return ListCellDescriptor(item, identifier: "Inner", cellClass: SimpleCell.self, configure: { cell in
+                cell.textLabel?.text = "\(item)"
+            })
+        }
+        let sectionDesc = ListSectionDescriptor(with: cellDescs)
+        let list = ListViewController(with: [sectionDesc])
+        self.show(list, sender: self)
     }
 
     func embed(_ vc: UIViewController) {
         self.currentChild = vc
         self.addChild(vc)
         self.view.addSubview(vc.view)
-        vc.view.bounds = self.view.bounds
+        vc.view.translatesAutoresizingMaskIntoConstraints = false
+        [
+            vc.view.topAnchor.constraint(equalTo: self.view.topAnchor),
+            vc.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            vc.view.rightAnchor.constraint(equalTo: view.rightAnchor),
+            vc.view.leftAnchor.constraint(equalTo: view.leftAnchor)
+            ].forEach { $0.isActive = true }
         vc.didMove(toParent: self)
     }
 
@@ -50,7 +64,6 @@ class ViewController: UIViewController {
         self.currentChild?.view.removeFromSuperview()
         self.currentChild?.removeFromParent()
     }
-
 
 }
 
