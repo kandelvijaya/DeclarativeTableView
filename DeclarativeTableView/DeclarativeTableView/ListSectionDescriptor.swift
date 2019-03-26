@@ -35,9 +35,10 @@ public struct ListSectionDescriptor<T: Hashable>: Hashable {
 
 extension ListSectionDescriptor {
 
-    public init(with items: [ListCellDescriptor<T, UITableViewCell>]) {
-        self.items = items
-        self.identifier = 0 // Might be required later on
+    public init<U>(with items: [ListCellDescriptor<T, U>]) where U: UITableViewCell {
+        let intItems = items.map { $0.rightFixed() }
+        self.items = intItems
+        self.identifier = 0
     }
 
 }

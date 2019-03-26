@@ -16,17 +16,25 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let models = ["Simple", "Multi Section", "Multi Section Heterogeneous"]
-        let identifier = "MCell"
+        let identifier = "MyCell"
 
-        let cellDescs = models.map { m in
-            ListCellDescriptor(m, identifier: identifier, cellClass: SimpleCell.self, configure: { cell in
+        let cellDescs  = models.map { m -> ListCellDescriptor<String, SimpleCell> in
+            var cd = ListCellDescriptor(m, identifier: identifier, cellClass: SimpleCell.self, configure: { cell in
                 cell.textLabel?.text = m
-            }).any()
+            })
+            cd.onSelect = { [weak self] in
+                self?.tapped(m)
+            }
+            return cd
         }
 
         let sections = ListSectionDescriptor(with: cellDescs)
         let list = ListViewController(with: [sections])
         embed(list)
+    }
+
+    func tapped(_ item: String) {
+        print(item)
     }
 
     func embed(_ vc: UIViewController) {

@@ -60,6 +60,20 @@ public extension ListCellDescriptor {
         return anyDescriptor
     }
 
+    /// This is synonymous to `ListCellDescriptor<String, SimpleCell> as! ListCellDescriptor<String, UITableViewCell>`
+    /// Compiler crashes on running the above casting. 
+    func rightFixed() -> ListCellDescriptor<Model, UITableViewCell> {
+        var rightFixed = ListCellDescriptor<Model, UITableViewCell>(self.model,
+                                                                             identifier: self.reuseIdentifier,
+                                                                             cellClass: self.cellClass,
+                                                                             configure: { cell in
+                                                                                self.configure(cell as! CellType)
+        })
+        rightFixed.onSelect = onSelect
+        rightFixed.onPerfromAction = onPerfromAction
+        return rightFixed
+    }
+
 }
 
 
