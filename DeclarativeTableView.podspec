@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios
   spec.source       = { :git => "https://github.com/kandelvijaya/DeclarativeTableView.git", :tag => "#{spec.version}" }
 
-  spec.source_files  = "DeclarativeTableView", "DeclarativeTableView/**/*.{h,m}"
+  spec.source_files  = "DeclarativeTableView/DeclarativeTableView/", "DeclarativeTableView/DeclarativeTableView/**/*.{h,m,swift}"
   spec.exclude_files = "Classes/Exclude"
 
 end
