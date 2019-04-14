@@ -18,6 +18,11 @@ public struct ListActionHandler {
     public static func empty() -> ListActionHandler {
         return ListActionHandler(onExit: nil, onRefreshContents: nil)
     }
+    
+    public init(onExit: ClosedBlock?, onRefreshContents: ClosedBlock?) {
+        self.onExit = onExit
+        self.onRefreshContents = onRefreshContents
+    }
 
 }
 
@@ -71,7 +76,7 @@ open class ListViewController<T: Hashable>: UITableViewController {
         return accumulator
     }
 
-    func update(with newModels: [ListSectionDescriptor<T>]) {
+    open func update(with newModels: [ListSectionDescriptor<T>]) {
         let currentModels = self.sectionDescriptors
         let diffResultTemp = orderedOperation(from: diff(currentModels, newModels))
 
@@ -96,7 +101,7 @@ open class ListViewController<T: Hashable>: UITableViewController {
         }
     }
 
-    func performSectionChanges<T>(_ diffSet: [DiffOperation<ListSectionDescriptor<T>>.Simple]) {
+    open func performSectionChanges<T>(_ diffSet: [DiffOperation<ListSectionDescriptor<T>>.Simple]) {
         diffSet.forEach { item in
             switch item {
             case let .delete(_, fromIndex):
@@ -130,7 +135,7 @@ open class ListViewController<T: Hashable>: UITableViewController {
         fatalError("initCoder: not implemented")
     }
 
-    func model(at indexPath: IndexPath) -> ListCellDescriptor<T, UITableViewCell> {
+    public func model(at indexPath: IndexPath) -> ListCellDescriptor<T, UITableViewCell> {
         return self.sectionDescriptors[indexPath.section].items[indexPath.row]
     }
 

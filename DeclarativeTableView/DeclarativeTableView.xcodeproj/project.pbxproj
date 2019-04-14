@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F985327B8E4CAFB0EED1701 /* Pods_DeclarativeTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66903F2982411CCC49545899 /* Pods_DeclarativeTableView.framework */; };
+		2802D37D2263DA91007253CB /* ModelAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802D37C2263DA91007253CB /* ModelAction.swift */; };
 		2854ABF3224444B40054830C /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854ABF2224444B40054830C /* GenericList<T>.swift */; };
 		2854ABF5224444BD0054830C /* ListSectionDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854ABF4224444BD0054830C /* ListSectionDescriptor.swift */; };
 		2854ABF9224445120054830C /* ListCellDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854ABF8224445120054830C /* ListCellDescriptor.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		20322AD6CC04666BD7E98378 /* Pods-DeclarativeTableViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeclarativeTableViewTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DeclarativeTableViewTests/Pods-DeclarativeTableViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2802D37C2263DA91007253CB /* ModelAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAction.swift; sourceTree = "<group>"; };
 		2854ABF2224444B40054830C /* GenericList<T>.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GenericList<T>.swift"; sourceTree = "<group>"; };
 		2854ABF4224444BD0054830C /* ListSectionDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSectionDescriptor.swift; sourceTree = "<group>"; };
 		2854ABF8224445120054830C /* ListCellDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellDescriptor.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				2854ABF8224445120054830C /* ListCellDescriptor.swift */,
 				28F278D62244434C00624798 /* Info.plist */,
 				2854ABFA224445E30054830C /* AnyDescriptor.swift */,
+				2802D37C2263DA91007253CB /* ModelAction.swift */,
 			);
 			path = DeclarativeTableView;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				2854ABF3224444B40054830C /* GenericList<T>.swift in Sources */,
 				2854ABFB224445E30054830C /* AnyDescriptor.swift in Sources */,
 				2854ABF9224445120054830C /* ListCellDescriptor.swift in Sources */,
+				2802D37D2263DA91007253CB /* ModelAction.swift in Sources */,
 				2854ABF5224444BD0054830C /* ListSectionDescriptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,7 +533,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UWKQH928Q9;
 				INFOPLIST_FILE = DeclarativeTableViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,7 +554,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UWKQH928Q9;
 				INFOPLIST_FILE = DeclarativeTableViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -698,7 +702,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DeclarativeTableView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -727,7 +731,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DeclarativeTableView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
