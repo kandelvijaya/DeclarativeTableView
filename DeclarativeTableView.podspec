@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DeclarativeTableView"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "Create list easily and declaratively."
 
   spec.license      = "MIT"
@@ -15,5 +15,7 @@ Pod::Spec.new do |spec|
 
   spec.source_files  = "DeclarativeTableView/DeclarativeTableView/", "DeclarativeTableView/DeclarativeTableView/**/*.{h,m,swift}"
   spec.exclude_files = "Classes/Exclude"
+  spec.dependency "FastDiff"
+  spec.dependency "Kekka"
 
 end
