@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.homepage           = "https://github.com/kandelvijaya/DeclarativeTableView"
 
   spec.platform     = :ios
-  spec.ios.deployment_target  = "9.0"
+  spec.ios.deployment_target  = "11.0"
   spec.source       = { :git => "https://github.com/kandelvijaya/DeclarativeTableView.git", :tag => "#{spec.version}" }
 
   spec.source_files  = "DeclarativeTableView/DeclarativeTableView/", "DeclarativeTableView/DeclarativeTableView/**/*.{h,m,swift}"
