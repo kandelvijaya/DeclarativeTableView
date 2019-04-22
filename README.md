@@ -1,4 +1,4 @@
-# Basic 
+# Presenting a list of items (Getting started) 
 Imagine wanting to put a array of items in a simple list and present it. Without the need to create table view subclass and go into delegate and datasource. 
 
 ## 1. Model 
@@ -54,12 +54,11 @@ The `ListViewController` uses `FastDiff`, a very fast diffing algorithm with tim
 ## 6. Present! 
 That's it. 
 
-# Note 
+**Note**  
 So far we have seen how to present one *type* of model with single *type/variant* of cell. We even had just 1 section. This is called homogeneous typed list. 
 
-Can we support multiple sections? What if each section could have varying types? For instance first section contains 3 big corp names. The second section, for some other reason, contains 3 different color. 
+Can we support multiple sections? 
 
-<>
 # Advanced (Heterogeneous list)
 First off this is how list is modelled.
 ```swift
