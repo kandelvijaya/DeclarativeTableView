@@ -15,7 +15,10 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let models = ["Simple", "Multi Section", "Multi Section Heterogeneous"]
+        
+        
+        let models = ["Apple", "Microsoft", "Google"]
+        
         let identifier = "MyCell"
 
         let cellDescs  = models.map { m -> ListCellDescriptor<String, SimpleCell> in
