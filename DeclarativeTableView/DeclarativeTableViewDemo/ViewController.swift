@@ -18,7 +18,6 @@ class ViewController: UIViewController {
         
         
         let models = ["Apple", "Microsoft", "Google"]
-        
         let identifier = "MyCell"
 
         let cellDescs  = models.map { m -> ListCellDescriptor<String, SimpleCell> in
@@ -32,8 +31,27 @@ class ViewController: UIViewController {
         }
 
         let sections = ListSectionDescriptor(with: cellDescs)
-        let list = ListViewController(with: [sections])
+        
+        
+        let modelsForNextSection = [ModelItem(color: .red, int: 1), .init(color: .blue, int: 2), .init(color: .purple, int: 3)]
+        let identifier2 = "IntCell"
+        let cellDescs2 = modelsForNextSection.map { m in
+            return ListCellDescriptor(m, identifier: identifier2, cellClass: SimpleCell.self, configure: { cell in
+                cell.textLabel?.text = "\(m.int)"
+                cell.backgroundColor = m.color
+            })
+        }
+        
+        let secondSection = ListSectionDescriptor(with: cellDescs2)
+        
+        let combinedSections = [sections.any(), secondSection.any()]
+        let list = ListViewController(with: combinedSections)
         embed(list)
+    }
+    
+    struct ModelItem: Hashable {
+        let color: UIColor
+        let int: Int
     }
 
     func tapped(_ item: String) {

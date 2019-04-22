@@ -47,12 +47,12 @@ extension ListSectionDescriptor {
 public extension ListSectionDescriptor {
 
     /// Copies metaData from existing `sectionDescriptor` to produce `newSectionDescriptors`
-    public func insertReplacing(newItems: [ListCellDescriptor<T, UITableViewCell>]) -> ListSectionDescriptor {
+    func insertReplacing(newItems: [ListCellDescriptor<T, UITableViewCell>]) -> ListSectionDescriptor {
         return ListSectionDescriptor(items: newItems, identifier: self.identifier)
     }
 
     /// Copies metaData from existing `sectionDescriptor` to produce `newSectionDescriptors`
-    public func insertReplacing(new: ListSectionDescriptor) -> ListSectionDescriptor {
+    func insertReplacing(new: ListSectionDescriptor) -> ListSectionDescriptor {
         return ListSectionDescriptor(items: new.items, identifier: self.identifier)
     }
 
@@ -78,4 +78,17 @@ extension ListSectionDescriptor: CustomStringConvertible {
         return "SEC { \(items) }"
     }
 
+}
+
+
+extension ListSectionDescriptor {
+    
+    /// converts a typed section into untyped section
+    /// useful to have erased type when creating heterogeneous list
+    public func any() -> ListSectionDescriptor<AnyHashable> {
+        let items = self.items.map { $0.any() }
+        let section = ListSectionDescriptor<AnyHashable>.init(items: items, identifier: self.identifier)
+        return section
+    }
+    
 }

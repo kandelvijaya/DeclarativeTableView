@@ -48,7 +48,7 @@ public extension ListCellDescriptor {
     /// to display different kinds of cells in the same list.
     ///
     /// - Returns: ListCellDescriptor<AnyHashable>
-    public func any() -> ListCellDescriptor<AnyHashable, UITableViewCell> {
+    func any() -> ListCellDescriptor<AnyHashable, UITableViewCell> {
         var anyDescriptor = ListCellDescriptor<AnyHashable, UITableViewCell>(self.model,
                                                                              identifier: self.reuseIdentifier,
                                                                              cellClass: self.cellClass,
