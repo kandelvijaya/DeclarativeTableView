@@ -44,7 +44,19 @@ class ViewController: UIViewController {
         
         let secondSection = ListSectionDescriptor(with: cellDescs2)
         
-        let combinedSections = [sections.any(), secondSection.any()]
+        
+        let mc1 = ListCellDescriptor(1, identifier: "mc1", cellClass: SimpleCell.self, configure: { cell in
+                cell.textLabel?.text = "\(1)"
+            })
+        
+        let mc2 = ListCellDescriptor("hello", identifier: "mc2", cellClass: AnotherCell.self, configure: { cell in
+                cell.textLabel?.text = "hello"
+                cell.backgroundColor = .purple
+            })
+        
+        let mixedSection = ListSectionDescriptor(with: [mc1.any(), mc2.any()])
+        
+        let combinedSections = [sections.any(), secondSection.any(), mixedSection]
         let list = ListViewController(with: combinedSections)
         embed(list)
     }
@@ -89,3 +101,4 @@ class ViewController: UIViewController {
 }
 
 class SimpleCell: UITableViewCell { }
+class AnotherCell: UITableViewCell { }

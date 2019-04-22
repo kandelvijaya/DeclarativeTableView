@@ -112,4 +112,51 @@ With this approach one can combine any kinds of cellDescriptors and sectionDescr
 
 </details>
 
-# Advanced (Custom action handling)
+# Advanced (Heterogeneous list with mixed cells in a section)
+## 1. Section with different model and cell
+Imagine we want to present Int and String typed models in same section using SimpleCell and AnotherCell. 
+
+
+```swift
+class AnotherCell: UITableViewCell { }
+```
+
+```swift
+let mc1 = ListCellDescriptor(1, identifier: "mc1", cellClass: SimpleCell.self, configure: { cell in
+        cell.textLabel?.text = "\(1)"
+    })
+
+/// look out for cell identifier
+let mc2 = ListCellDescriptor("hello", identifier: "mc2", cellClass: AnotherCell.self, configure: { cell in
+        cell.textLabel?.text = "hello"
+        cell.backgroundColor = .purple
+    })
+```
+
+## 2. Construct sectionDescriptor
+Now since we want to contain varying types of models in 1 section, our 
+section has to be type erased. 
+
+```swift
+/// .any() on ListCellDescriptor
+let mixedSection = ListSectionDescriptor(with: [mc1.any(), mc2.any()])
+```
+
+## 3. Present 
+Just append it to the previous 2 examples we build upon and display.
+
+```swift
+let combinedSections = [sections.any(), secondSection.any(), mixedSection]
+let list = ListViewController(with: combinedSections)
+```
+
+**NOTE:**   
+This now gives us full power of having complete heterogeneous list if we choose to. 
+
+# Advanced (Custom Action Handling)
+TBD
+
+# What's the pont?
+This is a tiny library that eliminates rudimentary and repetitive UITableView subclassing, delegates and datasource handling for every simple list we want to present. It also provides efficient updates out of the box. Why not just declare what to make a list of and watch it. 
+
+This is by no means a extensive list library, for that always use either UITableView or UICollectionView. This is useful in cases where you want to throw in a list either for demo, prototype or simple read only list. 
