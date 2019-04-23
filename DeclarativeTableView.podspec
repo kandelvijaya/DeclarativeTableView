@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DeclarativeTableView"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "Create list easily and declaratively."
 
   spec.license      = "MIT"
