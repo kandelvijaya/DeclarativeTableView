@@ -44,12 +44,12 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
         
     }
     
-    private func packingConsequetiveDeleteAddWithUpdate<T>(from diffResult:  [DiffOperation<T>.Simple]) -> [DiffOperation<T>.Simple] {
+    private func packingConsequetiveDeleteAddWithUpdate<T>(from diffResult:  [DiffOperation<T>]) -> [DiffOperation<T>] {
         if diffResult.isEmpty { return [] }
         
         var currentSeekIndex = 0 // This is the index that is not processed.
         
-        var accumulator: [DiffOperation<T>.Simple] = []
+        var accumulator: [DiffOperation<T>] = []
         while currentSeekIndex < diffResult.count {
             let thisItem = diffResult[currentSeekIndex]
             let nextIndex = currentSeekIndex.advanced(by: 1)
@@ -58,7 +58,7 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
                 let nextItem = diffResult[nextIndex]
                 switch (thisItem, nextItem) {
                 case let (.delete(di, dIndex), .add(ai, aIndex)) where dIndex == aIndex:
-                    let update = DiffOperation<T>.Simple.update(di, ai, dIndex)
+                    let update = DiffOperation<T>.update(di, ai, dIndex)
                     accumulator.append(update)
                 default:
                     accumulator.append(thisItem)
@@ -76,8 +76,9 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
     }
     
     open func update(with newModels: [CollectionSectionDescriptor<T>]) {
+        registerCells(for: newModels)
         let currentModels = self.sectionDescriptors
-        let diffResultTemp = orderedOperation(from: diff(currentModels, newModels))
+        let diffResultTemp = orderedOperationWithMove(from: diff(currentModels, newModels))
         
         /// We need to pack Section with delete(aI) and add(aI) as update(old, new, aI)
         /// This is so that the we can maintain the previous state in the Collection +- the change
@@ -87,7 +88,7 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
             self.sectionDescriptors = newModels
             
             /// first diff on deeper level
-            let internalEdits = internalDiff(from: diffResult)
+            let internalEdits = internalDiffHere(from: diffResult)
             internalEdits.forEach { performRowChanges($0.operations, at: $0.offset) }
             
             /// extenal diff
@@ -100,13 +101,60 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
         }
     }
     
-    open func performSectionChanges<T>(_ diffSet: [DiffOperation<CollectionSectionDescriptor<T>>.Simple]) {
+    public func internalDiffHere<T: Diffable>(from diffOperations: [DiffOperation<T>]) -> [(offset: Int, operations: [DiffOperation<T.InternalItemType>])] {
+        var accumulator = [(offset: Int, operations: [DiffOperation<T.InternalItemType>])]()
+        for operation in diffOperations {
+            switch operation {
+            case let .update(oldContainer, newContainer, atIndex):
+                let oldChildItems = oldContainer.children
+                let newChildItems = newContainer.children
+                let internalDiff = orderedOperationWithMove(from: diff(oldChildItems, newChildItems))
+                let output = (atIndex, internalDiff)
+                accumulator.append(output)
+            default:
+                break
+            }
+        }
+        return accumulator
+    }
+
+    
+    public func orderedOperationWithMove<T>(from operations: [DiffOperation<T>]) -> [DiffOperation<T>] {
+        /// Deletions need to happen from higher index to lower (to avoid corrupted indexes)
+        ///  [x, y, z] will be corrupt if we attempt [d(0), d(2), d(1)]
+        ///  d(0) succeeds then array is [x,y]. Attempting to delete at index 2 produces out of bounds error.
+        /// Therefore we sort in descending order of index
+        var deletions = [Int: DiffOperation<T>]()
+        var insertions = [DiffOperation<T>]()
+        var moves = [DiffOperation<T>]()
+        var updates = [DiffOperation<T>]()
+        
+        for oper in operations {
+            switch oper {
+            case .update:
+                updates.append(oper)
+            case let .add(item, atIndex):
+                insertions.append(.add(item, atIndex))
+            case let .delete(item, from):
+                deletions[from] = .delete(item, from)
+            case .move:
+                moves.append(oper)
+            }
+        }
+        let descendingOrderedIndexDeletions = deletions.sorted(by: {$0.0 > $1.0 }).map{ $0.1 }
+        return descendingOrderedIndexDeletions + insertions + updates + moves
+    }
+
+    
+    open func performSectionChanges<T>(_ diffSet: [DiffOperation<CollectionSectionDescriptor<T>>]) {
         diffSet.forEach { item in
             switch item {
             case let .delete(_, fromIndex):
                 self.collectionView.deleteSections(IndexSet(integer: fromIndex))
             case let .add(_, atIndex):
                 self.collectionView.insertSections(IndexSet(integer: atIndex))
+            case let .move(_, from, to):
+                self.collectionView.moveSection(from, toSection: to)
             case .update:
                 // This should be handled prior to the section update.
                 break
@@ -114,16 +162,16 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
         }
     }
     
-    func performRowChanges<T>(_ diffSet: [DiffOperation<CollectionCellDescriptor<T, UICollectionViewCell>>.Simple], at sectionIndex: Int) {
+    func performRowChanges<T>(_ diffSet: [DiffOperation<CollectionCellDescriptor<T, UICollectionViewCell>>], at sectionIndex: Int) {
         diffSet.forEach { cellDiffRes in
             switch cellDiffRes {
             case let .delete(_, atIndex):
                 self.collectionView.deleteItems(at: [IndexPath(row: atIndex, section: sectionIndex)])
             case let .add(_, idx):
                 self.collectionView.insertItems(at: [IndexPath(item: idx, section: sectionIndex)])
+            case let .move(_, from, to):
+                self.collectionView.moveItem(at: IndexPath(item: from, section: sectionIndex), to: IndexPath(item: to, section: sectionIndex))
             default:
-                // UITableView only supports section and cell level diffing.
-                // Any lowerlevel diff will/should be applied on cell level.
                 break
             }
         }
