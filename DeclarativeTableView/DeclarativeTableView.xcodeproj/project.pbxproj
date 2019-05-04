@@ -20,9 +20,9 @@
 		2854AC2122463D670054830C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854AC1F22463D670054830C /* AppDelegate.swift */; };
 		2854AC2222463DBB0054830C /* DeclarativeTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F278D22244434C00624798 /* DeclarativeTableView.framework */; };
 		2854AC2322463DBB0054830C /* DeclarativeTableView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28F278D22244434C00624798 /* DeclarativeTableView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		285C0373227CEC7F00A49ED2 /* CollectionCellDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C0372227CEC7F00A49ED2 /* CollectionCellDescriptor.swift */; };
-		285C0375227CED2100A49ED2 /* CollectionSectionDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C0374227CED2100A49ED2 /* CollectionSectionDescriptor.swift */; };
 		285C0377227CEEEC00A49ED2 /* GenericCollection<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C0376227CEEEC00A49ED2 /* GenericCollection<T>.swift */; };
+		285C037C227DE8E700A49ED2 /* CollectionCellDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C037A227DE8E600A49ED2 /* CollectionCellDescriptor.swift */; };
+		285C037D227DE8E700A49ED2 /* CollectionSectionDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C037B227DE8E700A49ED2 /* CollectionSectionDescriptor.swift */; };
 		28F278DC2244434C00624798 /* DeclarativeTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F278D22244434C00624798 /* DeclarativeTableView.framework */; };
 		28F278E12244434C00624798 /* DeclarativeTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F278E02244434C00624798 /* DeclarativeTableViewTests.swift */; };
 		28F278E32244434C00624798 /* DeclarativeTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F278D52244434C00624798 /* DeclarativeTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -75,9 +75,9 @@
 		2854AC1A22463D530054830C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2854AC1E22463D670054830C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2854AC1F22463D670054830C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		285C0372227CEC7F00A49ED2 /* CollectionCellDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellDescriptor.swift; sourceTree = "<group>"; };
-		285C0374227CED2100A49ED2 /* CollectionSectionDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSectionDescriptor.swift; sourceTree = "<group>"; };
 		285C0376227CEEEC00A49ED2 /* GenericCollection<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericCollection<T>.swift"; sourceTree = "<group>"; };
+		285C037A227DE8E600A49ED2 /* CollectionCellDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellDescriptor.swift; sourceTree = "<group>"; };
+		285C037B227DE8E700A49ED2 /* CollectionSectionDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionSectionDescriptor.swift; sourceTree = "<group>"; };
 		28F278D22244434C00624798 /* DeclarativeTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeclarativeTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F278D52244434C00624798 /* DeclarativeTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeclarativeTableView.h; sourceTree = "<group>"; };
 		28F278D62244434C00624798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,13 +178,13 @@
 				28F278D52244434C00624798 /* DeclarativeTableView.h */,
 				2854ABF2224444B40054830C /* GenericList<T>.swift */,
 				2854ABF4224444BD0054830C /* ListSectionDescriptor.swift */,
-				285C0374227CED2100A49ED2 /* CollectionSectionDescriptor.swift */,
 				2854ABF8224445120054830C /* ListCellDescriptor.swift */,
-				285C0372227CEC7F00A49ED2 /* CollectionCellDescriptor.swift */,
 				28F278D62244434C00624798 /* Info.plist */,
 				2854ABFA224445E30054830C /* AnyDescriptor.swift */,
 				2802D37C2263DA91007253CB /* ModelAction.swift */,
 				285C0376227CEEEC00A49ED2 /* GenericCollection<T>.swift */,
+				285C037A227DE8E600A49ED2 /* CollectionCellDescriptor.swift */,
+				285C037B227DE8E700A49ED2 /* CollectionSectionDescriptor.swift */,
 			);
 			path = DeclarativeTableView;
 			sourceTree = "<group>";
@@ -482,12 +482,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				285C0373227CEC7F00A49ED2 /* CollectionCellDescriptor.swift in Sources */,
-				285C0375227CED2100A49ED2 /* CollectionSectionDescriptor.swift in Sources */,
 				2854ABF3224444B40054830C /* GenericList<T>.swift in Sources */,
 				2854ABFB224445E30054830C /* AnyDescriptor.swift in Sources */,
 				285C0377227CEEEC00A49ED2 /* GenericCollection<T>.swift in Sources */,
 				2854ABF9224445120054830C /* ListCellDescriptor.swift in Sources */,
+				285C037D227DE8E700A49ED2 /* CollectionSectionDescriptor.swift in Sources */,
+				285C037C227DE8E700A49ED2 /* CollectionCellDescriptor.swift in Sources */,
 				2802D37D2263DA91007253CB /* ModelAction.swift in Sources */,
 				2854ABF5224444BD0054830C /* ListSectionDescriptor.swift in Sources */,
 			);
