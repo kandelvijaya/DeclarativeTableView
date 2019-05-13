@@ -40,12 +40,17 @@ class ViewController: UIViewController {
         }
     }
     
+    var current: [String] = []
     private func modelSections() -> [CollectionSectionDescriptor<AnyHashable>]{
         let mdls = ["Apple", "Microsoft", "Google", "||Zalando is a company that i work currently at.||", "There was mine", "And docs"]
         
-        var models = mdls.shuffled()
-        models.removeLast(2)
+//        var models = mdls.shuffled()
+//        models.removeLast(2)
         
+        let models1 = ["Apple"]
+        let models2 = ["Apple 2", "--> Microsoft"]
+        let models = models1 == current ? models2 : models1
+        current = models
         let identifier = "MyCell"
         
         let cellDescs  = models.map { m -> CollectionCellDescriptor<String, SimpleCell> in
@@ -84,7 +89,7 @@ class ViewController: UIViewController {
         
         let mixedSection = CollectionSectionDescriptor(with: [mc1.any(), mc2.any()])
         
-        var combinedSections = [sections.any(), secondSection.any(), mixedSection].shuffled()
+        var combinedSections = [sections.any(), secondSection.any(), mixedSection]
         return combinedSections
     }
     
@@ -183,6 +188,11 @@ class OrgLayout: UICollectionViewFlowLayout {
         lastHeight = 0
         let new = original.compactMap { self.layoutAttributesForItem(at: $0.indexPath) }
         return new
+    }
+    
+    override func finalLayoutAttributesForDisappearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        let original = super.finalLayoutAttributesForDisappearingItem(at: itemIndexPath)
+        return original
     }
     
     override func prepare() {

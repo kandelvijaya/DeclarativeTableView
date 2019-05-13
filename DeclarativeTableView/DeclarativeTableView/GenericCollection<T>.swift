@@ -10,6 +10,21 @@ import UIKit
 import FastDiff
 import Kekka
 
+extension DiffOperation.Simple: CustomStringConvertible {
+    
+    public var description: String {
+        switch self {
+        case let .add(item, at):
+            return "insert at index \(at)"
+        case let .delete(item, at):
+            return "delete from index \(at)"
+        case let .update(itemOld, itemNew, at):
+            return "update item at \(at)"
+        }
+    }
+    
+}
+
 
 /// A generic collection view controller.
 /// A collection view can contain different cells in a section and
@@ -44,52 +59,60 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
         
     }
     
-    private func packingConsequetiveDeleteAddWithUpdate<T>(from diffResult:  [DiffOperation<T>]) -> [DiffOperation<T>] {
-        if diffResult.isEmpty { return [] }
+    
+    private func packingDeleteAndUpdateOnSameIndexToUpdateIfUnderlyingModelIsSame<T>(from diffResult:  [DiffOperation<T>.Simple]) -> [DiffOperation<T>.Simple] {
+        var accumulated: [DiffOperation<T>.Simple] = []
+        var addDeleteMap: [Int: (add: DiffOperation<T>.Simple?, delete: DiffOperation<T>.Simple?)] = [:]
+        for index in diffResult {
+            if case let .add(_, at) = index {
+                let previous = addDeleteMap[at]
+                addDeleteMap[at] = (add: index, delete: previous?.delete)
+            } else if case let .delete(_, from) = index {
+                let previous = addDeleteMap[from]
+                addDeleteMap[from] = (add: previous?.add, delete: index)
+            }
+         }
         
-        var currentSeekIndex = 0 // This is the index that is not processed.
-        
-        var accumulator: [DiffOperation<T>] = []
-        while currentSeekIndex < diffResult.count {
-            let thisItem = diffResult[currentSeekIndex]
-            let nextIndex = currentSeekIndex.advanced(by: 1)
-            
-            if nextIndex < diffResult.count {
-                let nextItem = diffResult[nextIndex]
-                switch (thisItem, nextItem) {
-                case let (.delete(di, dIndex), .add(ai, aIndex)) where dIndex == aIndex:
-                    let update = DiffOperation<T>.update(di, ai, dIndex)
-                    accumulator.append(update)
-                default:
-                    accumulator.append(thisItem)
-                    accumulator.append(nextItem)
-                }
-                currentSeekIndex = nextIndex.advanced(by: 1)
-            } else {
-                // This is the last item
-                accumulator.append(thisItem)
-                // This breaks the iteration
-                currentSeekIndex = nextIndex
+        for aDmapItem in addDeleteMap.sorted(by: { $0.key < $1.key}) {
+            let addItem: (T, Int)? = aDmapItem.value.add?.add
+            let deleteItem: (T, Int)? = aDmapItem.value.delete?.delete
+            switch (addItem, deleteItem) {
+            case let (a?, d?):
+                let update = DiffOperation<T>.Simple.update(d.0, a.0, aDmapItem.key)
+                accumulated.append(update)
+            case let (a?, _):
+                accumulated.append(DiffOperation<T>.Simple.add(a.0, aDmapItem.key))
+            case let (_, d?):
+                accumulated.append(DiffOperation<T>.Simple.delete(d.0, aDmapItem.key))
+            default:
+                break
             }
         }
-        return accumulator
+        
+        let allDeletes = accumulated.filter { $0.delete != nil }.sorted(by: { $0.delete!.1 > $1.delete!.1})  // deletes in descending order
+        let addAdditions = accumulated.filter { $0.add != nil }
+        let updates = accumulated.filter { $0.update != nil }
+        return allDeletes + addAdditions + updates
     }
     
     open func update(with newModels: [CollectionSectionDescriptor<T>]) {
         registerCells(for: newModels)
         let currentModels = self.sectionDescriptors
-        let diffResultTemp = orderedOperationWithMove(from: diff(currentModels, newModels))
+        let diffResultTemp = orderedOperation(from: diff(currentModels, newModels))
         
         /// We need to pack Section with delete(aI) and add(aI) as update(old, new, aI)
         /// This is so that the we can maintain the previous state in the Collection +- the change
-        let diffResult = packingConsequetiveDeleteAddWithUpdate(from: diffResultTemp)
+        let diffResult = packingDeleteAndUpdateOnSameIndexToUpdateIfUnderlyingModelIsSame(from: diffResultTemp)
         
         collectionView.performBatchUpdates({
             self.sectionDescriptors = newModels
             
             /// first diff on deeper level
-            let internalEdits = internalDiffHere(from: diffResult)
-            internalEdits.forEach { performRowChanges($0.operations, at: $0.offset) }
+            let internalEdits = internalDiff(from: diffResult)
+            internalEdits.forEach {
+                let packed = packingDeleteAndUpdateOnSameIndexToUpdateIfUnderlyingModelIsSame(from: $0.operations)
+                performRowChanges(packed, at: $0.offset)
+            }
             
             /// extenal diff
             performSectionChanges(diffResult)
@@ -146,15 +169,13 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
     }
 
     
-    open func performSectionChanges<T>(_ diffSet: [DiffOperation<CollectionSectionDescriptor<T>>]) {
+    open func performSectionChanges<T>(_ diffSet: [DiffOperation<CollectionSectionDescriptor<T>>.Simple]) {
         diffSet.forEach { item in
             switch item {
             case let .delete(_, fromIndex):
                 self.collectionView.deleteSections(IndexSet(integer: fromIndex))
             case let .add(_, atIndex):
                 self.collectionView.insertSections(IndexSet(integer: atIndex))
-            case let .move(_, from, to):
-                self.collectionView.moveSection(from, toSection: to)
             case .update:
                 // This should be handled prior to the section update.
                 break
@@ -162,17 +183,15 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
         }
     }
     
-    func performRowChanges<T>(_ diffSet: [DiffOperation<CollectionCellDescriptor<T, UICollectionViewCell>>], at sectionIndex: Int) {
+    func performRowChanges<T>(_ diffSet: [DiffOperation<CollectionCellDescriptor<T, UICollectionViewCell>>.Simple], at sectionIndex: Int) {
         diffSet.forEach { cellDiffRes in
             switch cellDiffRes {
             case let .delete(_, atIndex):
                 self.collectionView.deleteItems(at: [IndexPath(row: atIndex, section: sectionIndex)])
             case let .add(_, idx):
                 self.collectionView.insertItems(at: [IndexPath(item: idx, section: sectionIndex)])
-            case let .move(_, from, to):
-                self.collectionView.moveItem(at: IndexPath(item: from, section: sectionIndex), to: IndexPath(item: to, section: sectionIndex))
-            default:
-                break
+            case let .update(_, _, idx):
+                self.collectionView.reloadItems(at: [IndexPath(item: idx, section: sectionIndex)])
             }
         }
     }
@@ -214,3 +233,22 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
     
 }
 
+
+
+extension DiffOperation.Simple {
+    
+    var add: (T, Int)? {
+        guard case let .add(v, i) = self else { return nil }
+        return (v, i)
+    }
+    
+    var delete: (T, Int)? {
+        guard case let .delete(v, i) = self else { return nil }
+        return (v, i)
+    }
+    
+    var update: (T, T, Int)? {
+        guard case let .update(o, n, i) = self else { return nil }
+        return (o, n, i)
+    }
+}
