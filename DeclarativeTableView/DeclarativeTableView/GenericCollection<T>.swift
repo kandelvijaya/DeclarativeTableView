@@ -14,11 +14,11 @@ extension DiffOperation.Simple: CustomStringConvertible {
     
     public var description: String {
         switch self {
-        case let .add(item, at):
+        case let .add(_, at):
             return "insert at index \(at)"
-        case let .delete(item, at):
+        case let .delete(_, at):
             return "delete from index \(at)"
-        case let .update(itemOld, itemNew, at):
+        case let .update(_, _, at):
             return "update item at \(at)"
         }
     }
@@ -32,7 +32,7 @@ extension DiffOperation.Simple: CustomStringConvertible {
 /// using a type erased CollectionCellDescriptor.
 ///
 /// - note: see `CellDescriptor.any()` for more info
-open class CollectionViewController<T: Hashable>: UICollectionViewController {
+open class CollectionViewController<T: Hashable>: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private(set) var sectionDescriptors: [CollectionSectionDescriptor<T>]
     private let handlers: ListActionHandler
@@ -40,7 +40,6 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
     public init(with models: [CollectionSectionDescriptor<T>], layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout(), actionsHandler: ListActionHandler = .empty()) {
         self.sectionDescriptors = models
         self.handlers = actionsHandler
-        layout.estimatedItemSize = CGSize(width: 1, height: 1)
         super.init(collectionViewLayout: layout)
         registerCells(for: models)
         self.collectionView.backgroundColor = .white
@@ -92,13 +91,36 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
         let allDeletes = accumulated.filter { $0.delete != nil }.sorted(by: { $0.delete!.1 > $1.delete!.1})  // deletes in descending order
         let addAdditions = accumulated.filter { $0.add != nil }
         let updates = accumulated.filter { $0.update != nil }
-        return allDeletes + addAdditions + updates
+        return updates + allDeletes + addAdditions
     }
+    
+    public func orderedOperationWithUpdateFirst<T>(from operations: [DiffOperation<T>]) -> [DiffOperation<T>.Simple] {
+        var deletions = [Int: DiffOperation<T>.Simple]()
+        var insertions = [DiffOperation<T>.Simple]()
+        var updates = [DiffOperation<T>.Simple]()
+        
+        for oper in operations {
+            switch oper {
+            case let .update(item, newItem, index):
+                updates.append(.update(item, newItem, index))
+            case let .add(item, atIndex):
+                insertions.append(.add(item, atIndex))
+            case let .delete(item, from):
+                deletions[from] = .delete(item, from)
+            case let .move(item, from, to):
+                insertions.append(.add(item, to))
+                deletions[from] = .delete(item, from)
+            }
+        }
+        let descendingOrderedIndexDeletions = deletions.sorted(by: {$0.0 > $1.0 }).map{ $0.1 }
+        return updates + descendingOrderedIndexDeletions + insertions
+    }
+
     
     open func update(with newModels: [CollectionSectionDescriptor<T>]) {
         registerCells(for: newModels)
         let currentModels = self.sectionDescriptors
-        let diffResultTemp = orderedOperation(from: diff(currentModels, newModels))
+        let diffResultTemp = orderedOperationWithUpdateFirst(from: diff(currentModels, newModels))
         
         /// We need to pack Section with delete(aI) and add(aI) as update(old, new, aI)
         /// This is so that the we can maintain the previous state in the Collection +- the change
@@ -124,51 +146,6 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
         }
     }
     
-    public func internalDiffHere<T: Diffable>(from diffOperations: [DiffOperation<T>]) -> [(offset: Int, operations: [DiffOperation<T.InternalItemType>])] {
-        var accumulator = [(offset: Int, operations: [DiffOperation<T.InternalItemType>])]()
-        for operation in diffOperations {
-            switch operation {
-            case let .update(oldContainer, newContainer, atIndex):
-                let oldChildItems = oldContainer.children
-                let newChildItems = newContainer.children
-                let internalDiff = orderedOperationWithMove(from: diff(oldChildItems, newChildItems))
-                let output = (atIndex, internalDiff)
-                accumulator.append(output)
-            default:
-                break
-            }
-        }
-        return accumulator
-    }
-
-    
-    public func orderedOperationWithMove<T>(from operations: [DiffOperation<T>]) -> [DiffOperation<T>] {
-        /// Deletions need to happen from higher index to lower (to avoid corrupted indexes)
-        ///  [x, y, z] will be corrupt if we attempt [d(0), d(2), d(1)]
-        ///  d(0) succeeds then array is [x,y]. Attempting to delete at index 2 produces out of bounds error.
-        /// Therefore we sort in descending order of index
-        var deletions = [Int: DiffOperation<T>]()
-        var insertions = [DiffOperation<T>]()
-        var moves = [DiffOperation<T>]()
-        var updates = [DiffOperation<T>]()
-        
-        for oper in operations {
-            switch oper {
-            case .update:
-                updates.append(oper)
-            case let .add(item, atIndex):
-                insertions.append(.add(item, atIndex))
-            case let .delete(item, from):
-                deletions[from] = .delete(item, from)
-            case .move:
-                moves.append(oper)
-            }
-        }
-        let descendingOrderedIndexDeletions = deletions.sorted(by: {$0.0 > $1.0 }).map{ $0.1 }
-        return descendingOrderedIndexDeletions + insertions + updates + moves
-    }
-
-    
     open func performSectionChanges<T>(_ diffSet: [DiffOperation<CollectionSectionDescriptor<T>>.Simple]) {
         diffSet.forEach { item in
             switch item {
@@ -187,10 +164,13 @@ open class CollectionViewController<T: Hashable>: UICollectionViewController {
         diffSet.forEach { cellDiffRes in
             switch cellDiffRes {
             case let .delete(_, atIndex):
+                print("Delete item at index \(atIndex)")
                 self.collectionView.deleteItems(at: [IndexPath(row: atIndex, section: sectionIndex)])
             case let .add(_, idx):
+                print("Adding item at index \(idx)")
                 self.collectionView.insertItems(at: [IndexPath(item: idx, section: sectionIndex)])
             case let .update(_, _, idx):
+                print("Updating item at index \(idx)")
                 self.collectionView.reloadItems(at: [IndexPath(item: idx, section: sectionIndex)])
             }
         }

@@ -9,10 +9,59 @@
 import UIKit
 import DeclarativeTableView
 
-
+class ModelItem {
+    var title: String = ""
+    var name: String = ""
+    var age: Int = 0
+}
 
 
 class ViewController: UIViewController {
+    
+    private var currentChild: UIViewController?
+    var list: ListViewController<AnyHashable>!
+    
+    var model = ModelItem()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        list = ListViewController.init(with: [])
+        embed(list)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let cell1 = ListCellDescriptor.init(model.age, identifier: "age", cellClass: EditingCell.self) { cell in
+            cell.textField.text = "\(self.model.age)"
+            cell.onEdit = { text in self.model.age = Int(text) ?? self.model.age }
+        }
+        
+        
+    }
+    
+    
+    func embed(_ vc: UIViewController) {
+        self.currentChild = vc
+        self.addChild(vc)
+        vc.view.frame = view.bounds
+        self.view.addSubview(vc.view)
+        vc.didMove(toParent: self)
+    }
+    
+}
+
+
+class EditingCell: UITableViewCell {
+    
+    var textField: UITextField!
+    var onEdit: ((String) -> Void)!
+    
+}
+
+
+
+class ViewController2: UIViewController {
 
     private var currentChild: UIViewController?
     

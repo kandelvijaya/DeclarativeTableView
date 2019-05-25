@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F985327B8E4CAFB0EED1701 /* Pods_DeclarativeTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66903F2982411CCC49545899 /* Pods_DeclarativeTableView.framework */; };
 		2802D37D2263DA91007253CB /* ModelAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802D37C2263DA91007253CB /* ModelAction.swift */; };
 		2854ABF3224444B40054830C /* GenericList<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854ABF2224444B40054830C /* GenericList<T>.swift */; };
 		2854ABF5224444BD0054830C /* ListSectionDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854ABF4224444BD0054830C /* ListSectionDescriptor.swift */; };
@@ -108,7 +107,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F985327B8E4CAFB0EED1701 /* Pods_DeclarativeTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
